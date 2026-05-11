@@ -1,54 +1,71 @@
-# 东方艺术 | Oriental Art
+# Oriental Art | Traditional Eastern Aesthetics
 
-一个展示东方传统艺术的静态网站，采用现代极简设计风格，体现东方美学的意境与韵味。
+A minimalist website showcasing traditional Eastern art, featuring modern design principles that honor Eastern philosophical aesthetics.
 
-## 在线预览
+## Live Preview
 
 🌐 **https://oriental-art.github.io/oriental-art**
 
-## 设计特点
+## Design Philosophy
 
-- **东方色彩系统**：墨色、宣纸、朱砂、玉绿，营造典雅氛围
-- ** typography**：思源宋体 + 思源黑体，中西文完美搭配
-- **留白艺术**：大量呼吸空间，体现东方美学中的"空"
-- **微妙动效**：克制优雅的过渡动画，不喧宾夺主
+- **Eastern Color Palette**: Ink black, rice paper, cinnabar red, and jade green
+- **Typography**: Cormorant Garamond (serif) + Inter (sans-serif)
+- **Spatial Design**: Generous whitespace embodying Eastern concepts of "emptiness"
+- **Restrained Motion**: Subtle, elegant transitions that never distract
 
-## 技术栈
+## Features
 
-- 纯 HTML + CSS + JavaScript
-- 响应式设计，适配各种设备
-- GitHub Actions 自动部署
+- **Responsive Design**: Optimized for all devices
+- **Smooth Scrolling**: Native CSS smooth scroll behavior
+- **Hover Interactions**: Elegant reveal effects on artwork cards
+- **Performance**: Zero dependencies, pure HTML/CSS/JS
 
-## 本地预览
+## Local Development
 
 ```bash
-# 直接在浏览器打开
+# Clone the repository
+git clone https://github.com/oriental-art/oriental-art.git
+cd oriental-art
+
+# Open in browser
 open index.html
 
-# 或使用本地服务器
+# Or serve locally
 python -m http.server 8000
-# 然后访问 http://localhost:8000
+# Visit http://localhost:8000
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 .
-├── index.html          # 主页面
+├── index.html          # Main page with all content
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml  # GitHub Pages 部署配置
+│       └── deploy.yml  # GitHub Pages deployment
 └── README.md
 ```
 
-## 部署
+## Deployment
 
-项目使用 GitHub Actions 自动部署到 GitHub Pages：
+This site is automatically deployed to GitHub Pages via GitHub Actions:
 
-1. 推送代码到 `main` 分支
-2. Actions 自动运行部署
-3. 访问 `https://oriental-art.github.io/oriental-art`
+1. Push to `main` branch
+2. GitHub Actions builds and deploys
+3. Site live at `https://oriental-art.github.io/oriental-art`
+
+## Art Categories
+
+- **Calligraphy** (書) — The way of writing as meditation
+- **Painting** (畫) — Ink landscapes and nature studies
+- **Ceramics** (陶) — Porcelain perfected over millennia
+- **Jade** (玉) — The stone of virtue and character
+
+## Credits
+
+- Fonts: [Google Fonts](https://fonts.google.com)
+- Design inspired by traditional Eastern aesthetics and modern minimalist principles
 
 ## License
 
-MIT
+MIT License
