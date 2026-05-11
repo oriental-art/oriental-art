@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东方艺术 | Oriental Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 东方色彩系统 - 墨色与宣纸 */
+            --ink-black: #1a1a1a;
+            --ink-gray: #4a4a4a;
+            --ink-light: #6b6b6b;
+            --paper-bg: #faf8f5;
+            --paper-warm: #f5f2ed;
+            --cinnabar: #c45c48;
+            --cinnabar-light: #d97b6a;
+            --jade: #5a8a7f;
+            --gold: #b8956b;
+            
+            /* 间距系统 - 8px 基础 */
+            --space-1: 8px;
+            --space-2: 16px;
+            --space-3: 24px;
+            --space-4: 32px;
+            --space-5: 48px;
+            --space-6: 64px;
+            --space-7: 96px;
+            --space-8: 128px;
+            
+            /* 字体 */
+            --font-serif: 'Noto Serif SC', serif;
+            --font-sans: 'Noto Sans SC', sans-serif;
+            
+            /* 动效 */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--paper-bg);
+            color: var(--ink-black);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* 导航 */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-3) var(--space-4);
+            background: linear-gradient(to bottom, var(--paper-bg) 0%, transparent 100%);
+            transition: background 0.3s var(--ease-out);
+        }
+        
+        nav.scrolled {
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--ink-black);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--space-4);
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--ink-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            transition: color 0.2s var(--ease-out);
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--cinnabar);
+            transition: width 0.3s var(--ease-out);
+        }
+        
+        .nav-links a:hover {
+            color: var(--ink-black);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero 区域 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-8) var(--space-4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(184, 149, 107, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 720px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            color: var(--ink-light);
+            margin-bottom: var(--space-3);
+            text-transform: uppercase;
+        }
+        
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: var(--space-4);
+            letter-spacing: 0.15em;
+        }
+        
+        .hero-title span {
+            display: block;
+            font-size: 0.5em;
+            letter-spacing: 0.2em;
+            color: var(--ink-light);
+            margin-top: var(--space-2);
+        }
+        
+        .hero-desc {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--ink-gray);
+            max-width: 480px;
+            margin: 0 auto var(--space-5);
+            line-height: 2;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            border: 1px solid var(--ink-black);
+            color: var(--ink-black);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .hero-cta:hover {
+            background: var(--ink-black);
+            color: var(--paper-bg);
+        }
+        
+        .hero-scroll {
+            position: absolute;
+            bottom: var(--space-5);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-1);
+            color: var(--ink-light);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            animation: float 2s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+        
+        .hero-scroll::after {
+            content: '';
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--ink-light), transparent);
+        }
+        
+        /* 分类区域 */
+        .categories {
+            padding: var(--space-8) var(--space-4);
+            background: var(--paper-warm);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto var(--space-7);
+        }
+        
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            color: var(--cinnabar);
+            margin-bottom: var(--space-2);
+        }
+        
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-3);
+        }
+        
+        .section-desc {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--ink-gray);
+            line-height: 1.9;
+        }
+        
+        .category-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-4);
+        }
+        
+        .category-card {
+            background: var(--paper-bg);
+            padding: var(--space-5);
+            text-align: center;
+            transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        }
+        
+        .category-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--space-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--ink-light);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: var(--ink-gray);
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .category-card:hover .category-icon {
+            border-color: var(--cinnabar);
+            color: var(--cinnabar);
+        }
+        
+        .category-name {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: var(--space-2);
+            letter-spacing: 0.1em;
+        }
+        
+        .category-en {
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: var(--ink-light);
+            text-transform: uppercase;
+            margin-bottom: var(--space-3);
+        }
+        
+        .category-desc {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--ink-gray);
+            line-height: 1.8;
+        }
+        
+        /* 精选作品 */
+        .featured {
+            padding: var(--space-8) var(--space-4);
+        }
+        
+        .featured-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-2);
+        }
+        
+        @media (max-width: 768px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .featured-item {
+            aspect-ratio: 4/3;
+            background: var(--paper-warm);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .featured-item.large {
+            grid-column: span 2;
+            aspect-ratio: 21/9;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-item.large {
+                grid-column: span 1;
+                aspect-ratio: 4/3;
+            }
+        }
+        
+        .featured-placeholder {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--ink-light);
+            letter-spacing: 0.2em;
+        }
+        
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: var(--space-4);
+            background: linear-gradient(to top, rgba(26, 26, 26, 0.8), transparent);
+            color: var(--paper-bg);
+            transform: translateY(100%);
+            transition: transform 0.4s var(--ease-out);
+        }
+        
+        .featured-item:hover .featured-overlay {
+            transform: translateY(0);
+        }
+        
+        .featured-title {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-1);
+        }
+        
+        .featured-artist {
+            font-size: 0.85rem;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        
+        /* 关于区域 */
+        .about {
+            padding: var(--space-8) var(--space-4);
+            background: var(--ink-black);
+            color: var(--paper-bg);
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-7);
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-5);
+            }
+        }
+        
+        .about-content .section-label {
+            color: var(--gold);
+        }
+        
+        .about-content .section-title {
+            color: var(--paper-bg);
+        }
+        
+        .about-content .section-desc {
+            color: rgba(250, 248, 245, 0.7);
+            margin-bottom: var(--space-4);
+        }
+        
+        .about-quote {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 2;
+            padding-left: var(--space-3);
+            border-left: 2px solid var(--cinnabar);
+            color: rgba(250, 248, 245, 0.9);
+        }
+        
+        .about-visual {
+            aspect-ratio: 3/4;
+            background: rgba(250, 248, 245, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(250, 248, 245, 0.1);
+        }
+        
+        .about-visual-text {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: rgba(250, 248, 245, 0.1);
+            writing-mode: vertical-rl;
+            letter-spacing: 0.3em;
+        }
+        
+        /* 页脚 */
+        footer {
+            padding: var(--space-6) var(--space-4);
+            background: var(--ink-black);
+            color: var(--paper-bg);
+            border-top: 1px solid rgba(250, 248, 245, 0.1);
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: var(--space-3);
+                text-align: center;
+            }
+        }
+        
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            letter-spacing: 0.15em;
+        }
+        
+        .footer-copy {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: rgba(250, 248, 245, 0.5);
+            letter-spacing: 0.05em;
+        }
+        
+        /* 减少动画偏好 */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">東方藝術</a>
+            <ul class="nav-links">
+                <li><a href="#categories">分类</a></li>
+                <li><a href="#featured">作品</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Oriental Art Collection</p>
+            <h1 class="hero-title">
+                东方美学
+                <span>传承千年的艺术之美</span>
+            </h1>
+            <p class="hero-desc">
+                探索中国传统艺术的深邃意境，从书法水墨到瓷器玉雕，感受东方文化的独特魅力与哲学智慧。
+            </p>
+            <a href="#featured" class="hero-cta">
+                浏览作品
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- 分类 -->
+    <section class="categories" id="categories">
+        <div class="section-header">
+            <p class="section-label">CATEGORIES</p>
+            <h2 class="section-title">艺术分类</h2>
+            <p class="section-desc">
+                东方艺术涵盖多个门类，每一类都承载着深厚的文化底蕴与独特的审美追求。
+            </p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-icon">书</div>
+                <h3 class="category-name">书法</h3>
+                <p class="category-en">Calligraphy</p>
+                <p class="category-desc">笔墨之间，气韵生动。书法是东方艺术中最富哲学意味的表现形式。</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">画</div>
+                <h3 class="category-name">绘画</h3>
+                <p class="category-en">Painting</p>
+                <p class="category-desc">山水花鸟，意境深远。水墨丹青描绘自然与心灵的交融。</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">瓷</div>
+                <h3 class="category-name">瓷器</h3>
+                <p class="category-en">Ceramics</p>
+                <p class="category-desc">土与火的艺术，千年窑火铸就的东方瑰宝，温润如玉。</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">玉</div>
+                <h3 class="category-name">玉雕</h3>
+                <p class="category-en">Jade</p>
+                <p class="category-desc">温润而泽，君子之德。玉雕承载着东方人对完美人格的追求。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选作品 -->
+    <section class="featured" id="featured">
+        <div class="section-header">
+            <p class="section-label">FEATURED WORKS</p>
+            <h2 class="section-title">精选作品</h2>
+            <p class="section-desc">
+                每一件作品都是艺术家心血的结晶，展现东方美学的精髓。
+            </p>
+        </div>
+        <div class="featured-grid">
+            <div class="featured-item large">
+                <span class="featured-placeholder">山水画卷</span>
+                <div class="featured-overlay">
+                    <h4 class="featured-title">千里江山图</h4>
+                    <p class="featured-artist">王希孟 · 北宋</p>
+                </div>
+            </div>
+            <div class="featured-item">
+                <span class="featured-placeholder">青花瓷</span>
+                <div class="featured-overlay">
+                    <h4 class="featured-title">青花缠枝莲纹梅瓶</h4>
+                    <p class="featured-artist">明代 · 永乐</p>
+                </div>
+            </div>
+            <div class="featured-item">
+                <span class="featured-placeholder">行书</span>
+                <div class="featured-overlay">
+                    <h4 class="featured-title">兰亭序</h4>
+                    <p class="featured-artist">王羲之 · 东晋</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于 -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <p class="section-label">ABOUT</p>
+                <h2 class="section-title">关于东方艺术</h2>
+                <p class="section-desc">
+                    东方艺术不仅是视觉的享受，更是心灵的修行。它追求"意境"而非"形似"，强调"气韵生动"，在有限的空间中创造无限的遐想。
+                </p>
+                <blockquote class="about-quote">
+                    "外师造化，中得心源。"<br>
+                    —— 张璪 · 唐代
+                </blockquote>
+            </div>
+            <div class="about-visual">
+                <span class="about-visual-text">艺</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">東方藝術</div>
+            <p class="footer-copy">© 2024 Oriental Art. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 导航滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
