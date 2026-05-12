@@ -78,6 +78,9 @@
             display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 24px;
         }
+        .article-link {
+            text-decoration: none; color: inherit;
+        }
         .article-card {
             background: white; padding: 28px;
             border: 1px solid rgba(0,0,0,0.06);
@@ -106,12 +109,6 @@
             font-size: 0.8rem; color: #999;
             display: flex; gap: 16px;
         }
-        .read-more {
-            display: inline-flex; align-items: center; gap: 8px;
-            color: var(--cinnabar); text-decoration: none;
-            font-size: 0.85rem; letter-spacing: 0.05em;
-            margin-top: 12px;
-        }
         footer {
             padding: 48px 32px; background: var(--ink-black); color: var(--paper-bg);
             text-align: center;
@@ -119,9 +116,6 @@
         .footer-logo {
             font-family: var(--font-serif); font-size: 1.25rem;
             letter-spacing: 0.15em; margin-bottom: 16px;
-        }
-        .footer-copy {
-            font-size: 0.8rem; color: rgba(250,248,245,0.5);
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -154,99 +148,118 @@
                 <span class="category-count">10 Articles</span>
             </div>
             <div class="articles-grid">
-                <a href="articles/calligraphy/01_soul_of_brush.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/02_wang_xizhi.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/03_five_shades_ink.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/04_cursive_script.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/05_four_treasures.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/06_seal_script.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/07_tang_masters.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/08_meditative_art.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/09_women_calligraphy.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/10_digital_age.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/01_shan_shui.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/02_brush_techniques.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/03_bird_flower.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/04_song_masters.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/05_literati_painting.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/06_figure_painting.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/07_color_painting.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/08_handscroll.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/09_modern_painting.html" style="text-decoration: none; color: inherit;"><a href="articles/painting/10_appreciation.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/01_ceramics_overview.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/02_blue_white.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/03_song_celadon.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/04_jingdezhen.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/05_tea_ceramics.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/06_monochrome.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/07_export_porcelain.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/08_collecting_ceramics.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/09_contemporary_ceramics.html" style="text-decoration: none; color: inherit;"><a href="articles/ceramics/10_marks.html" style="text-decoration: none; color: inherit;"><a href="articles/jade/01_jade_overview.html" style="text-decoration: none; color: inherit;"><a href="articles/jade/02_jade_carving.html" style="text-decoration: none; color: inherit;"><a href="articles/jade/03_cong_bi.html" style="text-decoration: none; color: inherit;"><a href="articles/jade/04_qing_jade.html" style="text-decoration: none; color: inherit;"><a href="articles/jade/05_collecting_jade.html" style="text-decoration: none; color: inherit;"><a href="articles/calligraphy/01_soul_of_brush.html" style="text-decoration: none; color: inherit;"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card"><article class="article-card">
-                    <div class="article-number">Article 01</div>
-                    <h3 class="article-title">The Soul of the Brush: Understanding Chinese Calligraphy</h3>
-                    <p class="article-excerpt">Discover the philosophy behind Chinese calligraphy, where brush meets soul and writing becomes meditation.</p>
-                    <div class="article-meta">
-                        <span>15 min read</span>
-                        <span>Introduction</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/02_wang_xizhi.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 02</div>
-                    <h3 class="article-title">Wang Xizhi: The Sage of Calligraphy</h3>
-                    <p class="article-excerpt">The life and legacy of China's most celebrated calligrapher and his enduring influence on the art form.</p>
-                    <div class="article-meta">
-                        <span>18 min read</span>
-                        <span>Master Profile</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/03_five_shades_ink.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 03</div>
-                    <h3 class="article-title">The Art of Ink: Five Shades and Their Meanings</h3>
-                    <p class="article-excerpt">Explore the subtle gradations of ink that create depth, atmosphere, and meaning in Chinese painting and calligraphy.</p>
-                    <div class="article-meta">
-                        <span>16 min read</span>
-                        <span>Technique</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/04_cursive_script.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 04</div>
-                    <h3 class="article-title">Cursive Script: The Ultimate Expression of Freedom</h3>
-                    <p class="article-excerpt">The most abstract and expressive form of Chinese calligraphy, where discipline enables spontaneity.</p>
-                    <div class="article-meta">
-                        <span>20 min read</span>
-                        <span>Script Style</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/05_four_treasures.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 05</div>
-                    <h3 class="article-title">The Four Treasures of the Study</h3>
-                    <p class="article-excerpt">A deep dive into the brush, ink, paper, and inkstone—the essential tools of the calligrapher's art.</p>
-                    <div class="article-meta">
-                        <span>22 min read</span>
-                        <span>Materials</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/06_seal_script.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 06</div>
-                    <h3 class="article-title">Seal Script: The Ancient Foundation</h3>
-                    <p class="article-excerpt">The earliest standardized Chinese writing and its continued significance in art and ritual.</p>
-                    <div class="article-meta">
-                        <span>17 min read</span>
-                        <span>Script Style</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/07_tang_masters.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 07</div>
-                    <h3 class="article-title">The Tang Dynasty Masters: Yan Zhenqing and Liu Gongquan</h3>
-                    <p class="article-excerpt">Two giants of Tang calligraphy who established standards that influenced all subsequent practice.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>Master Profile</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/08_meditative_art.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 08</div>
-                    <h3 class="article-title">The Meditative Art: Calligraphy as Spiritual Practice</h3>
-                    <p class="article-excerpt">How the practice of calligraphy cultivates presence, discipline, and spiritual insight.</p>
-                    <div class="article-meta">
-                        <span>18 min read</span>
-                        <span>Philosophy</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/09_women_calligraphy.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 09</div>
-                    <h3 class="article-title">Women in Calligraphy: Breaking the Brush Ceiling</h3>
-                    <p class="article-excerpt">The remarkable women who mastered the art of calligraphy despite social barriers.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>History</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/calligraphy/10_digital_age.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 10</div>
-                    <h3 class="article-title">Digital Age Calligraphy: Tradition Meets Technology</h3>
-                    <p class="article-excerpt">How contemporary technology is creating new possibilities for this ancient art form.</p>
-                    <div class="article-meta">
-                        <span>20 min read</span>
-                        <span>Contemporary</span>
-                    </div>
-                </article></a></article></a>
+                <a href="articles/calligraphy/01_soul_of_brush.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 01</div>
+                        <h3 class="article-title">The Soul of the Brush: Understanding Chinese Calligraphy</h3>
+                        <p class="article-excerpt">Discover the philosophy behind Chinese calligraphy, where brush meets soul and writing becomes meditation.</p>
+                        <div class="article-meta">
+                            <span>15 min read</span>
+                            <span>Introduction</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/02_wang_xizhi.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 02</div>
+                        <h3 class="article-title">Wang Xizhi: The Sage of Calligraphy</h3>
+                        <p class="article-excerpt">The life and legacy of China's most celebrated calligrapher and his enduring influence on the art form.</p>
+                        <div class="article-meta">
+                            <span>18 min read</span>
+                            <span>Master Profile</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/03_five_shades_ink.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 03</div>
+                        <h3 class="article-title">The Art of Ink: Five Shades and Their Meanings</h3>
+                        <p class="article-excerpt">Explore the subtle gradations of ink that create depth, atmosphere, and meaning in Chinese painting and calligraphy.</p>
+                        <div class="article-meta">
+                            <span>16 min read</span>
+                            <span>Technique</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/04_cursive_script.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 04</div>
+                        <h3 class="article-title">Cursive Script: The Ultimate Expression of Freedom</h3>
+                        <p class="article-excerpt">The most abstract and expressive form of Chinese calligraphy, where discipline enables spontaneity.</p>
+                        <div class="article-meta">
+                            <span>20 min read</span>
+                            <span>Script Style</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/05_four_treasures.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 05</div>
+                        <h3 class="article-title">The Four Treasures of the Study</h3>
+                        <p class="article-excerpt">A deep dive into the brush, ink, paper, and inkstone—the essential tools of the calligrapher's art.</p>
+                        <div class="article-meta">
+                            <span>22 min read</span>
+                            <span>Materials</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/06_seal_script.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 06</div>
+                        <h3 class="article-title">Seal Script: The Ancient Foundation</h3>
+                        <p class="article-excerpt">The earliest standardized Chinese writing and its continued significance in art and ritual.</p>
+                        <div class="article-meta">
+                            <span>17 min read</span>
+                            <span>Script Style</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/07_tang_masters.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 07</div>
+                        <h3 class="article-title">The Tang Dynasty Masters: Yan Zhenqing and Liu Gongquan</h3>
+                        <p class="article-excerpt">Two giants of Tang calligraphy who established standards that influenced all subsequent practice.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>Master Profile</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/08_meditative_art.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 08</div>
+                        <h3 class="article-title">The Meditative Art: Calligraphy as Spiritual Practice</h3>
+                        <p class="article-excerpt">How the practice of calligraphy cultivates presence, discipline, and spiritual insight.</p>
+                        <div class="article-meta">
+                            <span>18 min read</span>
+                            <span>Philosophy</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/09_women_calligraphy.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 09</div>
+                        <h3 class="article-title">Women in Calligraphy: Breaking the Brush Ceiling</h3>
+                        <p class="article-excerpt">The remarkable women who mastered the art of calligraphy despite social barriers.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>History</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/calligraphy/10_digital_age.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 10</div>
+                        <h3 class="article-title">Digital Age Calligraphy: Tradition Meets Technology</h3>
+                        <p class="article-excerpt">How contemporary technology is creating new possibilities for this ancient art form.</p>
+                        <div class="article-meta">
+                            <span>20 min read</span>
+                            <span>Contemporary</span>
+                        </div>
+                    </article>
+                </a>
             </div>
         </section>
-
         <!-- Painting -->
         <section class="category-section">
             <div class="category-header">
@@ -254,99 +267,118 @@
                 <span class="category-count">10 Articles</span>
             </div>
             <div class="articles-grid">
-                <a href="articles/painting/01_shan_shui.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 01</div>
-                    <h3 class="article-title">The Spirit of Landscape: Understanding Shan Shui</h3>
-                    <p class="article-excerpt">The philosophical foundations and artistic achievements of Chinese landscape painting.</p>
-                    <div class="article-meta">
-                        <span>20 min read</span>
-                        <span>Introduction</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/02_brush_techniques.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 02</div>
-                    <h3 class="article-title">The Art of the Brush: Techniques in Ink Painting</h3>
-                    <p class="article-excerpt">Master the techniques that create infinite variation from brush, ink, water, and paper.</p>
-                    <div class="article-meta">
-                        <span>22 min read</span>
-                        <span>Technique</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/03_bird_flower.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 03</div>
-                    <h3 class="article-title">Bird-and-Flower Painting: The Poetry of Nature</h3>
-                    <p class="article-excerpt">The intimate beauty of nature captured through sophisticated symbolic language.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>Genre</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/04_song_masters.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 04</div>
-                    <h3 class="article-title">The Song Dynasty Masters: Monumental Achievement</h3>
-                    <p class="article-excerpt">The golden age of Chinese painting when imperial patronage met artistic genius.</p>
-                    <div class="article-meta">
-                        <span>21 min read</span>
-                        <span>History</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/05_literati_painting.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 05</div>
-                    <h3 class="article-title">Literati Painting: When Scholars Took Up the Brush</h3>
-                    <p class="article-excerpt">The transformation of painting by scholar-artists who valued expression over technique.</p>
-                    <div class="article-meta">
-                        <span>20 min read</span>
-                        <span>Movement</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/06_figure_painting.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 06</div>
-                    <h3 class="article-title">The Art of Figure Painting</h3>
-                    <p class="article-excerpt">Portraits, deities, and daily life depicted through distinctive Chinese approaches.</p>
-                    <div class="article-meta">
-                        <span>17 min read</span>
-                        <span>Genre</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/07_color_painting.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 07</div>
-                    <h3 class="article-title">Color in Chinese Painting: Beyond Ink Monochrome</h3>
-                    <p class="article-excerpt">The sophisticated use of mineral and vegetable pigments in Chinese painting tradition.</p>
-                    <div class="article-meta">
-                        <span>17 min read</span>
-                        <span>Technique</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/08_handscroll.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 08</div>
-                    <h3 class="article-title">The Art of the Handscroll: Painting as Journey</h3>
-                    <p class="article-excerpt">The unique format that transforms viewing into a journey through space and time.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>Format</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/09_modern_painting.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 09</div>
-                    <h3 class="article-title">Modern Chinese Painting: Tradition Meets Innovation</h3>
-                    <p class="article-excerpt">How twentieth and twenty-first century artists have engaged with painting tradition.</p>
-                    <div class="article-meta">
-                        <span>18 min read</span>
-                        <span>Contemporary</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/painting/10_appreciation.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 10</div>
-                    <h3 class="article-title">How to Appreciate Chinese Painting</h3>
-                    <p class="article-excerpt">A practical guide for collectors and enthusiasts to deepen their understanding.</p>
-                    <div class="article-meta">
-                        <span>17 min read</span>
-                        <span>Guide</span>
-                    </div>
-                </article></a></article></a>
+                <a href="articles/painting/01_shan_shui.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 01</div>
+                        <h3 class="article-title">The Spirit of Landscape: Understanding Shan Shui</h3>
+                        <p class="article-excerpt">The philosophical foundations and artistic achievements of Chinese landscape painting.</p>
+                        <div class="article-meta">
+                            <span>20 min read</span>
+                            <span>Introduction</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/02_brush_techniques.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 02</div>
+                        <h3 class="article-title">The Art of the Brush: Techniques in Ink Painting</h3>
+                        <p class="article-excerpt">Master the techniques that create infinite variation from brush, ink, water, and paper.</p>
+                        <div class="article-meta">
+                            <span>22 min read</span>
+                            <span>Technique</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/03_bird_flower.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 03</div>
+                        <h3 class="article-title">Bird-and-Flower Painting: The Poetry of Nature</h3>
+                        <p class="article-excerpt">The intimate beauty of nature captured through sophisticated symbolic language.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>Genre</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/04_song_masters.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 04</div>
+                        <h3 class="article-title">The Song Dynasty Masters: Monumental Achievement</h3>
+                        <p class="article-excerpt">The golden age of Chinese painting when imperial patronage met artistic genius.</p>
+                        <div class="article-meta">
+                            <span>21 min read</span>
+                            <span>History</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/05_literati_painting.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 05</div>
+                        <h3 class="article-title">Literati Painting: When Scholars Took Up the Brush</h3>
+                        <p class="article-excerpt">The transformation of painting by scholar-artists who valued expression over technique.</p>
+                        <div class="article-meta">
+                            <span>20 min read</span>
+                            <span>Movement</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/06_figure_painting.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 06</div>
+                        <h3 class="article-title">The Art of Figure Painting</h3>
+                        <p class="article-excerpt">Portraits, deities, and daily life depicted through distinctive Chinese approaches.</p>
+                        <div class="article-meta">
+                            <span>17 min read</span>
+                            <span>Genre</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/07_color_painting.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 07</div>
+                        <h3 class="article-title">Color in Chinese Painting: Beyond Ink Monochrome</h3>
+                        <p class="article-excerpt">The sophisticated use of mineral and vegetable pigments in Chinese painting tradition.</p>
+                        <div class="article-meta">
+                            <span>17 min read</span>
+                            <span>Technique</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/08_handscroll.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 08</div>
+                        <h3 class="article-title">The Art of the Handscroll: Painting as Journey</h3>
+                        <p class="article-excerpt">The unique format that transforms viewing into a journey through space and time.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>Format</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/09_modern_painting.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 09</div>
+                        <h3 class="article-title">Modern Chinese Painting: Tradition Meets Innovation</h3>
+                        <p class="article-excerpt">How twentieth and twenty-first century artists have engaged with painting tradition.</p>
+                        <div class="article-meta">
+                            <span>18 min read</span>
+                            <span>Contemporary</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/painting/10_appreciation.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 10</div>
+                        <h3 class="article-title">How to Appreciate Chinese Painting</h3>
+                        <p class="article-excerpt">A practical guide for collectors and enthusiasts to deepen their understanding.</p>
+                        <div class="article-meta">
+                            <span>17 min read</span>
+                            <span>Guide</span>
+                        </div>
+                    </article>
+                </a>
             </div>
         </section>
-
         <!-- Ceramics -->
         <section class="category-section">
             <div class="category-header">
@@ -354,99 +386,118 @@
                 <span class="category-count">10 Articles</span>
             </div>
             <div class="articles-grid">
-                <a href="articles/ceramics/01_ceramics_overview.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 01</div>
-                    <h3 class="article-title">The Soul of Clay: Understanding Chinese Ceramics</h3>
-                    <p class="article-excerpt">Ten thousand years of transforming clay into objects of extraordinary beauty and sophistication.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>Introduction</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/02_blue_white.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 02</div>
-                    <h3 class="article-title">Blue and White: The Global Journey of Chinese Porcelain</h3>
-                    <p class="article-excerpt">The most successful ceramic style in world history and its influence across cultures.</p>
-                    <div class="article-meta">
-                        <span>16 min read</span>
-                        <span>Style</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/03_song_celadon.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 03</div>
-                    <h3 class="article-title">The Song Dynasty: Celadon and the Aesthetics of Restraint</h3>
-                    <p class="article-excerpt">The five great wares and the golden age of Chinese ceramic aesthetics.</p>
-                    <div class="article-meta">
-                        <span>18 min read</span>
-                        <span>History</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/04_jingdezhen.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 04</div>
-                    <h3 class="article-title">Imperial Kilns: The Pursuit of Perfection at Jingdezhen</h3>
-                    <p class="article-excerpt">How imperial patronage created the world's most important ceramic center.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>History</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/05_tea_ceramics.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 05</div>
-                    <h3 class="article-title">Tea and Ceramics: The Culture of Chinese Tea Ware</h3>
-                    <p class="article-excerpt">The vessels that elevated tea drinking to an art form and spiritual practice.</p>
-                    <div class="article-meta">
-                        <span>16 min read</span>
-                        <span>Culture</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/06_monochrome.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 06</div>
-                    <h3 class="article-title">Monochrome Glazes: The Art of Single-Color Porcelain</h3>
-                    <p class="article-excerpt">The technical mastery behind the seemingly simple single-color wares.</p>
-                    <div class="article-meta">
-                        <span>12 min read</span>
-                        <span>Technique</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/07_export_porcelain.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 07</div>
-                    <h3 class="article-title">Export Porcelain: Chinese Ceramics for the World</h3>
-                    <p class="article-excerpt">How Chinese ceramics shaped global taste and influenced world ceramic traditions.</p>
-                    <div class="article-meta">
-                        <span>15 min read</span>
-                        <span>Trade</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/08_collecting_ceramics.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 08</div>
-                    <h3 class="article-title">Collecting Chinese Ceramics: Building a Collection</h3>
-                    <p class="article-excerpt">Practical guidance for starting and developing a ceramics collection.</p>
-                    <div class="article-meta">
-                        <span>14 min read</span>
-                        <span>Guide</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/09_contemporary_ceramics.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 09</div>
-                    <h3 class="article-title">Contemporary Chinese Ceramics: Tradition and Innovation</h3>
-                    <p class="article-excerpt">How contemporary artists honor tradition while exploring new possibilities.</p>
-                    <div class="article-meta">
-                        <span>15 min read</span>
-                        <span>Contemporary</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/ceramics/10_marks.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 10</div>
-                    <h3 class="article-title">Ceramic Marks and Inscriptions: Reading the Language</h3>
-                    <p class="article-excerpt">Understanding the marks that reveal date, origin, and purpose of ceramic works.</p>
-                    <div class="article-meta">
-                        <span>15 min read</span>
-                        <span>Reference</span>
-                    </div>
-                </article></a></article></a>
+                <a href="articles/ceramics/01_ceramics_overview.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 01</div>
+                        <h3 class="article-title">The Soul of Clay: Understanding Chinese Ceramics</h3>
+                        <p class="article-excerpt">Ten thousand years of transforming clay into objects of extraordinary beauty and sophistication.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>Introduction</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/02_blue_white.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 02</div>
+                        <h3 class="article-title">Blue and White: The Global Journey of Chinese Porcelain</h3>
+                        <p class="article-excerpt">The most successful ceramic style in world history and its influence across cultures.</p>
+                        <div class="article-meta">
+                            <span>16 min read</span>
+                            <span>Style</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/03_song_celadon.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 03</div>
+                        <h3 class="article-title">The Song Dynasty: Celadon and the Aesthetics of Restraint</h3>
+                        <p class="article-excerpt">The five great wares and the golden age of Chinese ceramic aesthetics.</p>
+                        <div class="article-meta">
+                            <span>18 min read</span>
+                            <span>History</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/04_jingdezhen.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 04</div>
+                        <h3 class="article-title">Imperial Kilns: The Pursuit of Perfection at Jingdezhen</h3>
+                        <p class="article-excerpt">How imperial patronage created the world's most important ceramic center.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>History</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/05_tea_ceramics.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 05</div>
+                        <h3 class="article-title">Tea and Ceramics: The Culture of Chinese Tea Ware</h3>
+                        <p class="article-excerpt">The vessels that elevated tea drinking to an art form and spiritual practice.</p>
+                        <div class="article-meta">
+                            <span>16 min read</span>
+                            <span>Culture</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/06_monochrome.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 06</div>
+                        <h3 class="article-title">Monochrome Glazes: The Art of Single-Color Porcelain</h3>
+                        <p class="article-excerpt">The technical mastery behind the seemingly simple single-color wares.</p>
+                        <div class="article-meta">
+                            <span>12 min read</span>
+                            <span>Technique</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/07_export_porcelain.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 07</div>
+                        <h3 class="article-title">Export Porcelain: Chinese Ceramics for the World</h3>
+                        <p class="article-excerpt">How Chinese ceramics shaped global taste and influenced world ceramic traditions.</p>
+                        <div class="article-meta">
+                            <span>15 min read</span>
+                            <span>Trade</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/08_collecting_ceramics.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 08</div>
+                        <h3 class="article-title">Collecting Chinese Ceramics: Building a Collection</h3>
+                        <p class="article-excerpt">Practical guidance for starting and developing a ceramics collection.</p>
+                        <div class="article-meta">
+                            <span>14 min read</span>
+                            <span>Guide</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/09_contemporary_ceramics.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 09</div>
+                        <h3 class="article-title">Contemporary Chinese Ceramics: Tradition and Innovation</h3>
+                        <p class="article-excerpt">How contemporary artists honor tradition while exploring new possibilities.</p>
+                        <div class="article-meta">
+                            <span>15 min read</span>
+                            <span>Contemporary</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/ceramics/10_marks.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 10</div>
+                        <h3 class="article-title">Ceramic Marks and Inscriptions: Reading the Language</h3>
+                        <p class="article-excerpt">Understanding the marks that reveal date, origin, and purpose of ceramic works.</p>
+                        <div class="article-meta">
+                            <span>15 min read</span>
+                            <span>Reference</span>
+                        </div>
+                    </article>
+                </a>
             </div>
         </section>
-
         <!-- Jade -->
         <section class="category-section">
             <div class="category-header">
@@ -454,103 +505,123 @@
                 <span class="category-count">10 Articles</span>
             </div>
             <div class="articles-grid">
-                <a href="articles/jade/01_jade_overview.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 01</div>
-                    <h3 class="article-title">Jade: The Stone of Heaven and Earth</h3>
-                    <p class="article-excerpt">Eight thousand years of cultural significance and the virtues embodied in stone.</p>
-                    <div class="article-meta">
-                        <span>20 min read</span>
-                        <span>Introduction</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/jade/02_jade_carving.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 02</div>
-                    <h3 class="article-title">Jade Carving: Techniques from Ancient to Modern</h3>
-                    <p class="article-excerpt">The patient craft of transforming one of nature's hardest materials into art.</p>
-                    <div class="article-meta">
-                        <span>22 min read</span>
-                        <span>Technique</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/jade/03_cong_bi.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 03</div>
-                    <h3 class="article-title">The Cong and Bi: Ancient Jade Forms and Their Mysteries</h3>
-                    <p class="article-excerpt">The enigmatic ritual objects that connect us to China's Neolithic past.</p>
-                    <div class="article-meta">
-                        <span>18 min read</span>
-                        <span>Archaeology</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/jade/04_qing_jade.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 04</div>
-                    <h3 class="article-title">Jade in the Imperial Court: Treasures of the Qing Dynasty</h3>
-                    <p class="article-excerpt">The Qianlong emperor's passion and the peak of jade artistic achievement.</p>
-                    <div class="article-meta">
-                        <span>17 min read</span>
-                        <span>History</span>
-                    </div>
-                </article></a></article></a>
-                <a href="articles/jade/05_collecting_jade.html" style="text-decoration: none; color: inherit;"><article class="article-card">
-                    <div class="article-number">Article 05</div>
-                    <h3 class="article-title">Collecting Jade: A Guide for Connoisseurs</h3>
-                    <p class="article-excerpt">Essential knowledge for building a jade collection with confidence.</p>
-                    <div class="article-meta">
-                        <span>16 min read</span>
-                        <span>Guide</span>
-                    </div>
-                </article></a></article></a>
-                <article class="article-card">
-                    <div class="article-number">Article 06</div>
-                    <h3 class="article-title">Jadeite: The Burmese Treasure That Conquered China</h3>
-                    <p class="article-excerpt">The eighteenth-century introduction that transformed jade culture.</p>
-                    <div class="article-meta">
-                        <span>19 min read</span>
-                        <span>History</span>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <div class="article-number">Article 07</div>
-                    <h3 class="article-title">Jade in Chinese Medicine and Wellness</h3>
-                    <p class="article-excerpt">The traditional beliefs about jade's healing properties and contemporary wellness practices.</p>
-                    <div class="article-meta">
-                        <span>14 min read</span>
-                        <span>Wellness</span>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <div class="article-number">Article 08</div>
-                    <h3 class="article-title">The Symbolism of Jade: Decoding Ancient Meanings</h3>
-                    <p class="article-excerpt">Understanding the symbolic language that transforms jade into cultural expression.</p>
-                    <div class="article-meta">
-                        <span>15 min read</span>
-                        <span>Symbolism</span>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <div class="article-number">Article 09</div>
-                    <h3 class="article-title">Jade Jewelry: From Ancient Adornment to Contemporary Fashion</h3>
-                    <p class="article-excerpt">The evolution of jade as personal adornment across eight millennia.</p>
-                    <div class="article-meta">
-                        <span>15 min read</span>
-                        <span>Jewelry</span>
-                    </div>
-                </article>
-                <article class="article-card">
-                    <div class="article-number">Article 10</div>
-                    <h3 class="article-title">The Future of Jade: Conservation, Innovation, and Tradition</h3>
-                    <p class="article-excerpt">The challenges and opportunities facing jade in the twenty-first century.</p>
-                    <div class="article-meta">
-                        <span>16 min read</span>
-                        <span>Future</span>
-                    </div>
-                </article>
+                <a href="articles/jade/01_jade_overview.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 01</div>
+                        <h3 class="article-title">Jade: The Stone of Heaven and Earth</h3>
+                        <p class="article-excerpt">Eight thousand years of cultural significance and the virtues embodied in stone.</p>
+                        <div class="article-meta">
+                            <span>20 min read</span>
+                            <span>Introduction</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/02_jade_carving.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 02</div>
+                        <h3 class="article-title">Jade Carving: Techniques from Ancient to Modern</h3>
+                        <p class="article-excerpt">The patient craft of transforming one of nature's hardest materials into art.</p>
+                        <div class="article-meta">
+                            <span>22 min read</span>
+                            <span>Technique</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/03_cong_bi.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 03</div>
+                        <h3 class="article-title">The Cong and Bi: Ancient Jade Forms and Their Mysteries</h3>
+                        <p class="article-excerpt">The enigmatic ritual objects that connect us to China's Neolithic past.</p>
+                        <div class="article-meta">
+                            <span>18 min read</span>
+                            <span>Archaeology</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/04_qing_jade.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 04</div>
+                        <h3 class="article-title">Jade in the Imperial Court: Treasures of the Qing Dynasty</h3>
+                        <p class="article-excerpt">The Qianlong emperor's passion and the peak of jade artistic achievement.</p>
+                        <div class="article-meta">
+                            <span>17 min read</span>
+                            <span>History</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/05_collecting_jade.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 05</div>
+                        <h3 class="article-title">Collecting Jade: A Guide for Connoisseurs</h3>
+                        <p class="article-excerpt">Essential knowledge for building a jade collection with confidence.</p>
+                        <div class="article-meta">
+                            <span>16 min read</span>
+                            <span>Guide</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/06_jadeite.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 06</div>
+                        <h3 class="article-title">Jadeite: The Burmese Treasure That Conquered China</h3>
+                        <p class="article-excerpt">The eighteenth-century introduction that transformed jade culture.</p>
+                        <div class="article-meta">
+                            <span>19 min read</span>
+                            <span>History</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/07_jade_medicine.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 07</div>
+                        <h3 class="article-title">Jade in Chinese Medicine and Wellness</h3>
+                        <p class="article-excerpt">The traditional beliefs about jade's healing properties and contemporary wellness practices.</p>
+                        <div class="article-meta">
+                            <span>14 min read</span>
+                            <span>Wellness</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/08_symbolism.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 08</div>
+                        <h3 class="article-title">The Symbolism of Jade: Decoding Ancient Meanings</h3>
+                        <p class="article-excerpt">Understanding the symbolic language that transforms jade into cultural expression.</p>
+                        <div class="article-meta">
+                            <span>15 min read</span>
+                            <span>Symbolism</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/09_jade_jewelry.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 09</div>
+                        <h3 class="article-title">Jade Jewelry: From Ancient Adornment to Contemporary Fashion</h3>
+                        <p class="article-excerpt">The evolution of jade as personal adornment across eight millennia.</p>
+                        <div class="article-meta">
+                            <span>15 min read</span>
+                            <span>Jewelry</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="articles/jade/10_future_jade.html" class="article-link">
+                    <article class="article-card">
+                        <div class="article-number">Article 10</div>
+                        <h3 class="article-title">The Future of Jade: Conservation, Innovation, and Tradition</h3>
+                        <p class="article-excerpt">The challenges and opportunities facing jade in the twenty-first century.</p>
+                        <div class="article-meta">
+                            <span>16 min read</span>
+                            <span>Future</span>
+                        </div>
+                    </article>
+                </a>
             </div>
         </section>
     </div>
 
     <footer>
         <div class="footer-logo">ORIENTAL ART</div>
-        <p class="footer-copy">© 2024 Oriental Art Collection. All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: rgba(250,248,245,0.5);">© 2024 Oriental Art Collection. All rights reserved.</p>
     </footer>
 </body>
 </html>
