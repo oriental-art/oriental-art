@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade: The Stone of Heaven and Earth | Oriental Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #1a1a1a;
+            --ink-gray: #4a4a4a;
+            --paper-bg: #faf8f5;
+            --paper-warm: #f5f2ed;
+            --cinnabar: #c45c48;
+            --gold: #b8956b;
+            --jade: #5a8a7f;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--paper-bg);
+            color: var(--ink-black);
+            line-height: 1.8;
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            padding: 24px 32px;
+            background: linear-gradient(to bottom, var(--paper-bg), transparent);
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1280px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            font-family: var(--font-serif); font-size: 1.5rem;
+            letter-spacing: 0.15em; text-decoration: none; color: var(--ink-black);
+        }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a {
+            color: var(--ink-gray); text-decoration: none;
+            font-size: 0.85rem; font-weight: 400;
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+        .article-header {
+            padding: 160px 32px 60px;
+            text-align: center;
+            background: var(--paper-warm);
+        }
+        .article-category {
+            font-size: 0.75rem; letter-spacing: 0.2em;
+            color: var(--cinnabar); text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .article-title {
+            font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 400; max-width: 800px; margin: 0 auto;
+            line-height: 1.3;
+        }
+        .article-content {
+            max-width: 720px; margin: 0 auto; padding: 60px 32px;
+            font-size: 1.05rem; line-height: 1.9;
+        }
+        .article-content h2 {
+            font-family: var(--font-serif); font-size: 1.6rem;
+            font-weight: 400; margin: 48px 0 24px;
+            color: var(--ink-black);
+        }
+        .article-content h3 {
+            font-family: var(--font-serif); font-size: 1.3rem;
+            font-weight: 400; margin: 32px 0 16px;
+        }
+        .article-content p {
+            margin-bottom: 20px; color: var(--ink-gray);
+        }
+        .article-content strong {
+            color: var(--ink-black); font-weight: 500;
+        }
+        .article-content em {
+            font-style: italic; color: var(--ink-gray);
+        }
+        .gallery-section {
+            max-width: 720px; margin: 0 auto; padding: 0 32px 60px;
+        }
+        .gallery-title {
+            font-family: var(--font-serif); font-size: 1.4rem;
+            font-weight: 400; margin-bottom: 24px;
+            color: var(--ink-black);
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .gallery-item {
+            text-align: center;
+        }
+        .gallery-item img {
+            max-width: 100%; height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .gallery-caption {
+            font-size: 0.85rem;
+            color: var(--ink-gray);
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--cinnabar); text-decoration: none;
+            font-size: 0.9rem; margin-top: 40px;
+        }
+        footer {
+            padding: 48px 32px; background: var(--ink-black); color: var(--paper-bg);
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">ORIENTAL ART</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../articles.html">Articles</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="article-category">Jade</div>
+        <h1 class="article-title">Jade: The Stone of Heaven and Earth</h1>
+    </header>
+
+    <article class="article-content">
+<p>
+Jade occupies a unique position in Chinese culture, valued above all other materials for over eight thousand years. More precious than gold, more durable than bronze, jade embodies the virtues of the ideal person—gentle yet unyielding, pure yet resilient, beautiful yet modest. The Chinese word for jade (<em>yu</em>) covers several hardstones, primarily nephrite and jadeite, but the cultural significance of jade transcends geological categories.
+</p>
+<h2>Origins and Early History</h2>
+<h2>Jade in Ancient Ritual</h2>
+<p>
+By the Shang dynasty (c. 1600-1046 BCE), jade had become central to Chinese ritual practice. The <em>Rites of Zhou</em> (<em>Zhouli</em>), a classical text, describes six ritual jades used in worship of heaven, earth, and the four directions:
+</p>
+<p>
+<strong>The blue <em>bi</em> disc</strong> was offered to heaven
+<strong>The yellow <em>cong</em> tube</strong> was offered to earth
+<strong>The green <em>gui</em> tablet</strong> was offered to the east
+<strong>The red <em>zhang</em> blade</strong> was offered to the south
+<strong>The white <em>hu</em> disc</strong> was offered to the west
+<strong>The black <em>huang</em> arc</strong> was offered to the north
+</p>
+<p>
+These ritual jades established the cosmological significance of jade in Chinese culture. The material became the medium through which humans communicated with the divine.
+</p>
+<p>
+Jade was also essential in burial practice. The wealthy were buried with jade objects, including plugs for the orifices of the body to prevent the spirit's escape and suits of jade plaques sewn together with gold wire. The famous jade burial suit of Prince Liu Sheng, buried in 113 BCE, required over 2,000 jade plaques and took years to create.
+</p>
+<h2>The Virtues of Jade</h2>
+<p>
+Confucius (551-479 BCE) gave jade its enduring moral significance. In the <em>Book of Rites</em> (<em>Liji</em>), Confucius lists the virtues embodied by jade:
+</p>
+<p>
+<strong>Benevolence</strong> (<em>ren</em>): Jade's warm, lustrous surface suggests kindness
+<strong>Righteousness</strong> (<em>yi</em>): Jade's internal texture suggests integrity
+<strong>Wisdom</strong> (<em>zhi</em>): Jade's resonant sound suggests clarity of mind
+<strong>Courage</strong> (<em>yong</em>): Jade's hardness suggests firmness of character
+<strong>Purity</strong> (<em>jie</em>): Jade's unblemished surface suggests moral cleanliness
+</p>
+<p>
+These associations transformed jade from a precious material into a symbol of moral cultivation. The gentleman (<em>junzi</em>) was advised to wear jade as a reminder of the virtues he should cultivate. Jade carvings became moral lessons in stone, their forms carrying symbolic meanings.
+</p>
+<h2>Types of Jade</h2>
+<p>
+Chinese jade culture recognizes two primary materials:
+</p>
+<p>
+<strong>Nephrite</strong> (<em>ruan yu</em> or <em>zhenyu</em>) is a calcium magnesium silicate that has been used in China since the Neolithic period. It occurs in various colors—white, green, yellow, brown, black—with white and green being most valued. Nephrite is tough and resistant to breaking, making it ideal for carving.
+</p>
+<p>
+The finest nephrite comes from Hetian (Khotan) in Xinjiang province, a source that has been exploited for over three thousand years. The "mutton fat" (<em>yangzhi</em>) jade of Hetian—white with a warm, waxy luster—is the most prized variety.
+</p>
+<p>
+<strong>Jadeite</strong> (<em>ying yu</em> or <em>feicui</em>) is a sodium aluminum silicate that was introduced to China from Burma (Myanmar) in the eighteenth century. It is harder and more translucent than nephrite and occurs in a wider range of colors, including the famous emerald green (<em>feicui</em> means "kingfisher" after the bird's plumage).
+</p>
+<p>
+Jadeite became extremely popular in the Qing dynasty, particularly for jewelry. The vivid green of fine jadeite commands higher prices than any other jade variety.
+</p>
+<h2>Jade Carving Techniques</h2>
+<p>
+Working jade requires patience and skill. Traditional techniques include:
+</p>
+<p>
+<strong>Cutting</strong> with abrasive sand and water. Jade is harder than steel and cannot be cut with metal tools. Traditional craftsmen used wire saws with abrasive sand to slice jade blocks.
+</p>
+<p>
+<strong>Drilling</strong> with hollow tubes. The <em>cong</em> tubes of the Liangzhu culture were drilled using bamboo tubes and abrasive sand, a process that could take months for a single object.
+</p>
+<p>
+<strong>Carving</strong> with abrasive tools. Jade is shaped by grinding away material with tools of increasingly fine abrasive. Traditional carvers used a bow drill with sand; modern carvers use diamond tools.
+</p>
+<p>
+<strong>Polishing</strong> brings out jade's natural luster. The final polishing uses fine abrasives to create the smooth, glowing surface that characterizes fine jade.
+</p>
+<h2>Major Periods of Jade Art</h2>
+<p>
+<strong>The Shang and Zhou dynasties</strong> (c. 1600-256 BCE) produced ritual jades of extraordinary refinement. The <em>cong</em>, <em>bi</em>, and other ritual forms reached their classical perfection.
+</p>
+<p>
+<strong>The Han dynasty</strong> (206 BCE-220 CE) saw jade work become more naturalistic. Small sculptures of animals, figures, and mythical creatures demonstrate technical mastery and artistic sensitivity.
+</p>
+<p>
+<strong>The Tang dynasty</strong> (618-907) brought new influences from Central Asia. Jade carvings show foreign motifs and more robust, three-dimensional forms.
+</p>
+<p>
+<strong>The Song dynasty</strong> (960-1279) favored refined, small-scale works. Jade carvings from this period often depict natural subjects—flowers, birds, insects—with exquisite delicacy.
+</p>
+<p>
+<strong>The Ming dynasty</strong> (1368-1644) saw a revival of archaistic styles, with carvers imitating ancient ritual forms. The period also produced elaborate decorative objects, including vessels and ornaments.
+</p>
+<p>
+<strong>The Qing dynasty</strong> (1644-1912) represents the peak of jade carving technical achievement. Imperial workshops produced works of extraordinary complexity, including massive sculptures carved from single boulders. The Qianlong emperor was a passionate jade connoisseur whose collection set standards for quality.
+</p>
+<h2>Symbolism in Jade Carving</h2>
+<p>
+Jade carvings are rich in symbolic meaning:
+</p>
+<p>
+<strong>The dragon</strong> represents imperial power and masculine yang energy
+<strong>The phoenix</strong> represents feminine yin energy and prosperity
+<strong>The tortoise</strong> represents longevity and support
+<strong>The crane</strong> represents longevity and immortality
+<strong>The bat</strong> (<em>fu</em>) represents good fortune (a homophone)
+<strong>The peach</strong> represents longevity
+<strong>The pomegranate</strong> represents fertility and many children
+<strong>The double gourd</strong> represents continuity and protection
+</p>
+<p>
+Combinations of symbols create complex meanings. A bat on a peach represents "good fortune and longevity"; a crane and tortoise together represent extreme old age.
+</p>
+<h2>Collecting and Connoisseurship</h2>
+<p>
+Jade has been collected in China for millennia. The imperial collections, now dispersed among museums, represented the finest accumulation of jade ever assembled.
+</p>
+<p>
+Today, jade remains highly valued in the art market. Fine antique pieces command high prices; contemporary works by master carvers are also collected. However, the market is complicated by forgeries and treated stones.
+</p>
+<p>
+<strong>Authentication</strong> requires expertise. Genuine antique jade shows signs of age—patina, wear patterns, mineral changes—that are difficult to fake. Scientific testing can help determine material and age.
+</p>
+<p>
+<strong>Quality assessment</strong> considers color, translucency, texture, and workmanship. The finest jade has an even, saturated color; high translucency; fine, smooth texture; and is worked with skill and artistry.
+</p>
+<p>
+<strong>Treated jade</strong> is common in the market. Bleaching, dyeing, and impregnation with polymers can improve the appearance of low-quality stone. Disclosure of treatments is required in reputable markets but may be lacking elsewhere.
+</p>
+<h2>Contemporary Jade Carving</h2>
+<p>
+Jade carving continues as a living tradition in China:
+</p>
+<p>
+<strong>Traditional subjects</strong>—dragons, phoenixes, Buddhist figures, natural forms—remain popular. Master carvers maintain classical techniques while bringing personal interpretation.
+</p>
+<p>
+<strong>Contemporary designs</strong> address modern themes and aesthetics. Some carvers create abstract forms; others incorporate Western influences.
+</p>
+<p>
+<strong>Jewelry</strong> is a major market for jadeite. Designers create pieces that combine Chinese tradition with international fashion.
+</p>
+<p>
+<strong>Preservation of skills</strong> is a concern. Traditional jade carving requires years of apprenticeship; attracting young people to this demanding craft is challenging.
+</p>
+<h2>Conclusion</h2>
+<p>
+Jade represents the longest continuous artistic tradition in Chinese culture, spanning over eight thousand years from the Neolithic to the present. Its unique combination of physical properties—hardness, toughness, beauty—and cultural associations—virtue, purity, immortality—has made it the most precious material in Chinese civilization.
+</p>
+<p>
+For contemporary viewers, jade offers both aesthetic pleasure and cultural education. Each piece connects us to long traditions of craftsmanship, to philosophical values that shaped Chinese culture, and to the universal human impulse to create beauty from natural materials. Whether one admires a Neolithic <em>cong</em>, a Han dynasty sculpture, or a contemporary carving, jade demonstrates the extraordinary possibilities of this remarkable stone.
+</p>
+<p>
+The tradition of jade carving continues to evolve, as each generation of artists brings new creativity to this ancient practice. Jade remains, as it has been for millennia, the stone of heaven and earth, connecting the human and the divine, the earthly and the transcendent.
+</p>
+    </article>
+
+    <section class="gallery-section">
+        <h2 class="gallery-title">Featured Artworks</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80" alt="玉石雕刻艺术" loading="lazy">
+                <div class="gallery-caption">玉石雕刻艺术</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80" alt="精美玉器" loading="lazy">
+                <div class="gallery-caption">精美玉器</div>
+            </div>
+        </div>
+    </section>
+
+    <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 60px;">
+        <a href="../articles.html" class="back-link">← Back to Articles</a>
+    </div>
+
+    <footer>
+        <div class="footer-logo">ORIENTAL ART</div>
+        <p style="font-size: 0.8rem; color: rgba(250,248,245,0.5);">Exploring the Beauty of Eastern Aesthetics</p>
+    </footer>
+</body>
+</html>

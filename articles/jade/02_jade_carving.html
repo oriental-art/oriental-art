@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade Carving: Techniques from Ancient to Modern | Oriental Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink-black: #1a1a1a;
+            --ink-gray: #4a4a4a;
+            --paper-bg: #faf8f5;
+            --paper-warm: #f5f2ed;
+            --cinnabar: #c45c48;
+            --gold: #b8956b;
+            --jade: #5a8a7f;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--paper-bg);
+            color: var(--ink-black);
+            line-height: 1.8;
+        }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            padding: 24px 32px;
+            background: linear-gradient(to bottom, var(--paper-bg), transparent);
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1280px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            font-family: var(--font-serif); font-size: 1.5rem;
+            letter-spacing: 0.15em; text-decoration: none; color: var(--ink-black);
+        }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a {
+            color: var(--ink-gray); text-decoration: none;
+            font-size: 0.85rem; font-weight: 400;
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+        .article-header {
+            padding: 160px 32px 60px;
+            text-align: center;
+            background: var(--paper-warm);
+        }
+        .article-category {
+            font-size: 0.75rem; letter-spacing: 0.2em;
+            color: var(--cinnabar); text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .article-title {
+            font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 400; max-width: 800px; margin: 0 auto;
+            line-height: 1.3;
+        }
+        .article-content {
+            max-width: 720px; margin: 0 auto; padding: 60px 32px;
+            font-size: 1.05rem; line-height: 1.9;
+        }
+        .article-content h2 {
+            font-family: var(--font-serif); font-size: 1.6rem;
+            font-weight: 400; margin: 48px 0 24px;
+            color: var(--ink-black);
+        }
+        .article-content h3 {
+            font-family: var(--font-serif); font-size: 1.3rem;
+            font-weight: 400; margin: 32px 0 16px;
+        }
+        .article-content p {
+            margin-bottom: 20px; color: var(--ink-gray);
+        }
+        .article-content strong {
+            color: var(--ink-black); font-weight: 500;
+        }
+        .article-content em {
+            font-style: italic; color: var(--ink-gray);
+        }
+        .gallery-section {
+            max-width: 720px; margin: 0 auto; padding: 0 32px 60px;
+        }
+        .gallery-title {
+            font-family: var(--font-serif); font-size: 1.4rem;
+            font-weight: 400; margin-bottom: 24px;
+            color: var(--ink-black);
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .gallery-item {
+            text-align: center;
+        }
+        .gallery-item img {
+            max-width: 100%; height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .gallery-caption {
+            font-size: 0.85rem;
+            color: var(--ink-gray);
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--cinnabar); text-decoration: none;
+            font-size: 0.9rem; margin-top: 40px;
+        }
+        footer {
+            padding: 48px 32px; background: var(--ink-black); color: var(--paper-bg);
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">ORIENTAL ART</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../articles.html">Articles</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="article-category">Jade</div>
+        <h1 class="article-title">Jade Carving: Techniques from Ancient to Modern</h1>
+    </header>
+
+    <article class="article-content">
+<p>
+The art of jade carving represents one of humanity's most patient and demanding crafts. Working with a material harder than steel, jade carvers have developed techniques over millennia that transform stubborn stone into objects of extraordinary delicacy and beauty. Understanding these techniques illuminates both the technical achievements and the aesthetic values of Chinese jade culture.
+</p>
+<h2>The Nature of Jade</h2>
+<h2>Ancient Techniques: Working Without Metal</h2>
+<p>
+The earliest jade workers had no metal tools. They shaped jade by abrasion—rubbing the stone against abrasive materials harder than jade itself. Quartz sand, garnet, and corundum can all abrade jade given enough time and patience.
+</p>
+<p>
+<strong>Cutting</strong> was done with string or bamboo saws used with abrasive sand and water. The saw did not cut the jade; the abrasive carried by the saw did the work. A single cut through a jade block might take days or weeks.
+</p>
+<p>
+<strong>Drilling</strong> used hollow tubes of bamboo or bone with abrasive slurry. The tube was rotated while abrasive was fed into the hole. This technique, used to create the central holes in <em>cong</em> tubes and <em>bi</em> discs, required extraordinary patience. A deep hole might take months to drill.
+</p>
+<p>
+<strong>Carving</strong> used tools of wood, bone, or stone with abrasive. The carver would grind away material slowly, shaping the jade through persistent abrasion. The process was so slow that mistakes were virtually irreversible.
+</p>
+<p>
+<strong>Polishing</strong> used fine abrasives to bring out jade's natural luster. The final polish might use bamboo or leather with polishing compound to create the smooth, glowing surface characteristic of fine jade.
+</p>
+<p>
+Despite these limitations, Neolithic jade workers created objects of extraordinary sophistication. The <em>cong</em> tubes of the Liangzhu culture, with their perfectly square outer sections and circular inner tubes, demonstrate precise measurement and execution that seem impossible without modern tools.
+</p>
+<h2>Traditional Metal Tools</h2>
+<p>
+With the Bronze Age and then the Iron Age, jade carvers gained tools that made their work easier, though the fundamental process of abrasion remained unchanged.
+</p>
+<p>
+<strong>Bronze and iron tools</strong> could be shaped into drills, saws, and carving points. These tools cut more efficiently than wood or bone but still required abrasive to work jade. A bronze drill with sand could penetrate jade faster than a bamboo drill, but the process remained slow.
+</p>
+<p>
+<strong>The treadle lathe</strong> allowed continuous rotation of drills and grinding wheels. Powered by foot, these lathes freed the carver's hands to hold the jade and apply abrasive. The lathe revolutionized jade drilling and shaping.
+</p>
+<p>
+<strong>Diamond tools</strong> became available through trade with India and Southeast Asia. Diamond, harder than jade, could cut directly without abrasive. However, natural diamonds were rare and expensive, limiting their use.
+</p>
+<p>
+Despite these advances, traditional jade carving remained a slow, labor-intensive process. A complex carving might take years to complete, and the labor involved contributed significantly to jade's value.
+</p>
+<h2>The Qing Dynasty: Technical Perfection</h2>
+<p>
+The Qing dynasty (1644-1912) represents the peak of traditional jade carving. Imperial patronage supported workshops where the finest craftsmen developed techniques of extraordinary refinement.
+</p>
+<p>
+<strong>Relief carving</strong> created designs that stood out from a background plane. The depth of relief could vary from shallow (<em>qian diao</em>) to deep (<em>shen diao</em>), creating dramatic three-dimensional effects.
+</p>
+<p>
+<strong>Openwork</strong> (<em>tou diao</em>) carved completely through the jade, creating镂空 designs of extraordinary delicacy. The famous "double-sided" carving showed different designs on front and back, connected by openwork.
+</p>
+<p>
+<strong>Chain carving</strong> created interlocking chains from a single piece of jade. Each link was carved separately while still attached to the block, then freed when complete. A single mistake could ruin the entire piece.
+</p>
+<p>
+<strong>Inlay</strong> combined jade with other materials—gold, silver, other gemstones—to create complex decorative effects. The "gold-inlaid jade" technique set jade plaques in gold mounts.
+</p>
+<p>
+<strong>Multi-piece assembly</strong> created large works from multiple jade sections. The famous jade mountain sculptures of the Qianlong period were carved in sections and then assembled.
+</p>
+<p>
+The Qianlong emperor's passion for jade drove innovation. Imperial workshops produced works of unprecedented scale and complexity, including the massive "Yu the Great Taming the Waters" carving, which weighs over 5,000 kilograms and took years to complete.
+</p>
+<h2>Modern Techniques</h2>
+<p>
+Contemporary jade carving employs modern technology while maintaining traditional values:
+</p>
+<p>
+<strong>Diamond tools</strong> are now synthetic and affordable, revolutionizing jade working. Diamond saws can slice jade blocks efficiently; diamond drills penetrate quickly; diamond burrs carve with precision.
+</p>
+<p>
+<strong>Power tools</strong>—electric drills, grinders, and rotary tools—speed the carving process dramatically. What once took months can now be done in days.
+</p>
+<p>
+<strong>Ultrasonic carving</strong> uses high-frequency vibrations to drive abrasive against the jade surface. This technique allows precise control and can create textures difficult to achieve by hand.
+</p>
+<p>
+<strong>Laser cutting</strong> can slice jade with extreme precision, though heat can damage the stone. Lasers are used for initial cutting rather than detailed carving.
+</p>
+<p>
+<strong>Computer-aided design</strong> allows carvers to plan complex pieces before touching the stone. Three-dimensional modeling helps visualize the final result and avoid mistakes.
+</p>
+<p>
+Despite these technologies, hand carving remains essential for fine work. Machines can remove material quickly, but the subtle decisions that make a carving art—where to place a line, how deep to cut, when to stop—require human judgment.
+</p>
+<h2>The Carving Process</h2>
+<p>
+A jade carving proceeds through distinct stages:
+</p>
+<p>
+<strong>Selection</strong> of the rough jade block is crucial. The carver examines the stone for color, texture, flaws, and potential. The best carvers can visualize the finished work within the rough stone.
+</p>
+<p>
+<strong>Design</strong> considers the jade's characteristics. The carver must work with the stone's natural color variations, incorporating them into the design rather than fighting them. Flaws must be avoided or incorporated.
+</p>
+<p>
+<strong>Rough cutting</strong> removes excess material and establishes the basic form. Diamond saws and grinders are used for this stage.
+</p>
+<p>
+<strong>Rough carving</strong> establishes the main shapes and proportions. The carver works from large forms to small details, gradually refining the work.
+</p>
+<p>
+<strong>Detail carving</strong> brings the work to life. Fine tools create textures, patterns, and small features. This stage requires the most skill and patience.
+</p>
+<p>
+<strong>Finishing</strong> smooths surfaces and prepares for polishing. Any tool marks are removed; surfaces are prepared to take a polish.
+</p>
+<p>
+<strong>Polishing</strong> brings out jade's natural luster. Progressive finer abrasives create the smooth, glowing surface that characterizes fine jade.
+</p>
+<h2>Regional Styles</h2>
+<p>
+Different regions developed distinctive jade carving styles:
+</p>
+<p>
+<strong>Beijing</strong> style, influenced by imperial patronage, emphasizes technical perfection and traditional subjects. Beijing carvers are known for elaborate openwork and fine detail.
+</p>
+<p>
+<strong>Yangzhou</strong> style favors naturalistic subjects and delicate relief carving. Yangzhou jade carvings often depict landscapes, figures, and flowers with painterly sensitivity.
+</p>
+<p>
+<strong>Suzhou</strong> style is refined and elegant, influenced by the city's literati culture. Suzhou carvers excel at small, intimate pieces.
+</p>
+<p>
+<strong>Henan</strong> (Dushan) style works with local variegated jade, using the stone's natural color variations to create pictorial effects. Dushan jade carvings resemble paintings in stone.
+</p>
+<p>
+<strong>Xinjiang</strong> style works with the famous Hetian nephrite, emphasizing the stone's natural beauty through simple, bold forms.
+</p>
+<h2>The Carver's Training</h2>
+<p>
+Traditional jade carving required years of apprenticeship. A young carver would begin with simple tasks—polishing, rough cutting—gradually progressing to more complex work as skill developed.
+</p>
+<p>
+The master-apprentice relationship was crucial. The master taught not just technique but also aesthetic judgment, helping the apprentice develop the eye that distinguishes good work from bad.
+</p>
+<p>
+This traditional training system has largely broken down. Today, jade carvers may learn in technical schools or through less formal arrangements. Attracting young people to this demanding craft is a challenge, as faster paths to income exist.
+</p>
+<h2>Contemporary Challenges</h2>
+<p>
+Jade carving faces several challenges in the contemporary era:
+</p>
+<p>
+<strong>Material scarcity</strong> has made fine jade increasingly expensive. The best Hetian nephrite is largely exhausted; fine jadeite from Burma is controlled by military interests. Carvers must work with lower-quality material or pay premium prices.
+</p>
+<p>
+<strong>Market pressures</strong> favor quick production over artistic refinement. Mass-produced jade carvings flood the market, making it difficult for serious artists to compete.
+</p>
+<p>
+<strong>Skill transmission</strong> is uncertain. Traditional techniques require years to master; few young people are willing to commit to this lengthy training.
+</p>
+<p>
+<strong>Cultural change</strong> has reduced the cultural significance of jade. Young Chinese may prefer gold, diamonds, or Western jewelry to traditional jade.
+</p>
+<p>
+Despite these challenges, fine jade carving continues. Master carvers maintain traditional standards; collectors value quality; and the inherent beauty of jade ensures its continued appeal.
+</p>
+<h2>Conclusion</h2>
+<p>
+Jade carving represents one of humanity's most demanding crafts, requiring patience, skill, and artistic sensitivity. From the Neolithic carvers who created <em>cong</em> tubes without metal tools to contemporary masters using diamond and lasers, jade carvers have transformed stubborn stone into objects of extraordinary beauty.
+</p>
+<p>
+The techniques of jade carving embody Chinese cultural values—patience, persistence, respect for material, and the pursuit of perfection. Each carved jade object represents not just artistic vision but also the labor and skill required to realize that vision in one of nature's hardest materials.
+</p>
+<p>
+For contemporary viewers, understanding jade carving techniques deepens appreciation of the art form. Recognizing the difficulty of drilling a hole, the skill required for openwork, the judgment needed to work with natural color variations—we see jade carvings not just as beautiful objects but as achievements of human ingenuity and dedication. The tradition of jade carving, maintained across eight thousand years, continues to demonstrate what is possible when human skill meets natural beauty.
+</p>
+    </article>
+
+    <section class="gallery-section">
+        <h2 class="gallery-title">Featured Artworks</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80" alt="玉石雕刻艺术" loading="lazy">
+                <div class="gallery-caption">玉石雕刻艺术</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80" alt="精美玉器" loading="lazy">
+                <div class="gallery-caption">精美玉器</div>
+            </div>
+        </div>
+    </section>
+
+    <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 60px;">
+        <a href="../articles.html" class="back-link">← Back to Articles</a>
+    </div>
+
+    <footer>
+        <div class="footer-logo">ORIENTAL ART</div>
+        <p style="font-size: 0.8rem; color: rgba(250,248,245,0.5);">Exploring the Beauty of Eastern Aesthetics</p>
+    </footer>
+</body>
+</html>
