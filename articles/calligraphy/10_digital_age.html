@@ -117,6 +117,21 @@
             padding: 48px 32px; background: var(--ink-black); color: var(--paper-bg);
             text-align: center;
         }
+                .inline-image {
+            margin: 32px 0;
+            text-align: center;
+        }
+        .inline-image img {
+            max-width: 100%; height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .inline-image .caption {
+            font-size: 0.85rem;
+            color: var(--ink-gray);
+            margin-top: 12px;
+            font-style: italic;
+        }
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .gallery-grid { grid-template-columns: 1fr; }
@@ -237,19 +252,6 @@ The characters written today, whether with brush on paper or stylus on tablet, j
 </p>
     </article>
 
-    <section class="gallery-section">
-        <h2 class="gallery-title">Featured Artworks</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80" alt="王羲之《兰亭序》书法" loading="lazy">
-                <div class="gallery-caption">王羲之《兰亭序》书法</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80" alt="毛笔书写艺术" loading="lazy">
-                <div class="gallery-caption">毛笔书写艺术</div>
-            </div>
-        </div>
-    </section>
 
     <div style="max-width: 720px; margin: 0 auto; padding: 0 32px 60px;">
         <a href="../articles.html" class="back-link">← Back to Articles</a>
