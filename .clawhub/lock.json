@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "skills": {
+    "research-report-skill": {
+      "version": "2.0.0",
+      "installedAt": 1775236277950
+    },
+    "mckinsey-research": {
+      "version": "2.1.0",
+      "installedAt": 1775236293475
+    },
+    "deepresearchwork": {
+      "version": "1.0.0",
+      "installedAt": 1775236300022
+    },
+    "ai-researcher": {
+      "version": "1.0.0",
+      "installedAt": 1775236305929
+    },
+    "market-research-agent": {
+      "version": "1.0.0",
+      "installedAt": 1775236321989
+    },
+    "public-company-analysis": {
+      "version": "1.0.0",
+      "installedAt": 1775236570769
+    },
+    "equity-valuation-framework": {
+      "version": "1.0.3",
+      "installedAt": 1775236573002
+    },
+    "tech-earnings-deepdive": {
+      "version": "1.0.0",
+      "installedAt": 1775236584192
+    },
+    "research-paper-writer": {
+      "version": "0.1.0",
+      "installedAt": 1775236622800
+    },
+    "financial-analyst": {
+      "version": "1.0.0",
+      "installedAt": 1775236622809
+    },
+    "business-writing": {
+      "version": "0.1.0",
+      "installedAt": 1775236623897
+    },
+    "academic-writing": {
+      "version": "1.0.0",
+      "installedAt": 1775236624789
+    },
+    "chart-mpl": {
+      "version": "1.0.0",
+      "installedAt": 1775238028242
+    },
+    "python-matplotlib-chinese-font": {
+      "version": "1.0.0",
+      "installedAt": 1775238028837
+    },
+    "ppt-generator": {
+      "version": "1.0.0",
+      "installedAt": 1775242038585
+    },
+    "report-ppt-generator-pro": {
+      "version": "1.0.7",
+      "installedAt": 1775242039429
+    },
+    "superdesign": {
+      "version": "1.0.0",
+      "installedAt": 1775242046219
+    },
+    "ui-ux-pro-max": {
+      "version": "0.1.0",
+      "installedAt": 1775242048600
+    },
+    "web-scraping": {
+      "version": "1.0.0",
+      "installedAt": 1775242441620
+    },
+    "playwright": {
+      "version": "1.0.3",
+      "installedAt": 1775242442334
+    },
+    "smart-web-scraper": {
+      "version": "1.0.0",
+      "installedAt": 1775242443183
+    },
+    "jisu": {
+      "version": "1.0.10",
+      "installedAt": 1775242452487
+    },
+    "yahoo-data-fetcher": {
+      "version": "1.0.2",
+      "installedAt": 1775242452585
+    },
+    "scrape-web": {
+      "version": "1.0.0",
+      "installedAt": 1775242452918
+    },
+    "api-dev": {
+      "version": "1.0.0",
+      "installedAt": 1775242459593
+    },
+    "pptx-generator": {
+      "version": "1.0.2",
+      "installedAt": 1775242713491
+    },
+    "mckinsey-presentation-generator": {
+      "version": "1.0.0",
+      "installedAt": 1775242713516
+    },
+    "mbb-strategist": {
+      "version": "1.0.0",
+      "installedAt": 1775242714456
+    },
+    "afrexai-board-reporting": {
+      "version": "1.1.0",
+      "installedAt": 1775242722150
+    },
+    "pitch-perfect": {
+      "version": "1.0.0",
+      "installedAt": 1775242722413
+    },
+    "ppt-design": {
+      "version": "0.1.0",
+      "installedAt": 1775242743227
+    },
+    "frontend-slides": {
+      "version": "2.0.2",
+      "installedAt": 1775289432667
+    }
+  }
+}

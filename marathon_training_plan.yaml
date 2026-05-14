@@ -1,0 +1,172 @@
+name: "半程马拉松训练计划"
+description: "从零基础到半马1:55完赛 - 30周系统训练计划"
+version: "2.0"
+
+athlete:
+  name: "跑者"
+  level: "beginner"
+  current_weekly_volume: 5  # km
+  current_pace: "8:00"  # min/km
+  goal:
+    event: "半程马拉松"
+    date: "2026-10-20"
+    target_time: "1:55:00"
+    target_pace: "5:27"
+  zones:
+    pace:
+      easy: "7:30-8:30"  # 轻松跑配速
+      marathon: "6:00-6:15"  # 马拉松配速（半马目标配速+30秒）
+      threshold: "5:45-6:00"  # 乳酸阈值配速
+      interval: "5:20-5:35"  # 间歇跑配速
+      repetition: "5:00-5:15"  # 重复跑配速
+
+plan:
+  total_weeks: 30
+  
+  phases:
+    - name: "基础期"
+      weeks: "1-12"
+      focus: "建立有氧基础，逐步增加跑量"
+      weekly_structure:
+        Mon: run.rest
+        Tue: run.easy(30)
+        Wed: run.rest
+        Thu: run.easy(35)
+        Fri: run.rest
+        Sat: run.easy(40)
+        Sun: run.rest
+      progression:
+        week_1: { volume: 8, long_run: 4 }
+        week_2: { volume: 10, long_run: 5 }
+        week_3: { volume: 12, long_run: 6 }
+        week_4: { volume: 8, long_run: 4 }  # 恢复周
+        week_5: { volume: 14, long_run: 7 }
+        week_6: { volume: 16, long_run: 8 }
+        week_7: { volume: 18, long_run: 9 }
+        week_8: { volume: 12, long_run: 6 }  # 恢复周
+        week_9: { volume: 20, long_run: 10 }
+        week_10: { volume: 22, long_run: 11 }
+        week_11: { volume: 24, long_run: 12 }
+        week_12: { volume: 16, long_run: 8 }  # 恢复周
+
+    - name: "提升期"
+      weeks: "13-20"
+      focus: "引入强度训练，提升乳酸阈值"
+      weekly_structure:
+        Mon: run.rest
+        Tue: run.tempo(20, 10, 10)
+        Wed: run.easy(30)
+        Thu: run.intervals(400, 6, 90)
+        Fri: run.rest
+        Sat: run.easy(35)
+        Sun: run.long(14)
+      progression:
+        week_13: { volume: 25, long_run: 13, tempo: 20, intervals: "400x4" }
+        week_14: { volume: 27, long_run: 14, tempo: 25, intervals: "400x5" }
+        week_15: { volume: 24, long_run: 10 }  # 恢复周
+        week_16: { volume: 28, long_run: 15, tempo: 25, intervals: "400x6" }
+        week_17: { volume: 30, long_run: 16, tempo: 30, intervals: "800x4" }
+        week_18: { volume: 25, long_run: 12 }  # 恢复周
+        week_19: { volume: 32, long_run: 17, tempo: 30, intervals: "800x5" }
+        week_20: { volume: 34, long_run: 18, tempo: 35, intervals: "1000x4" }
+
+    - name: "强化期"
+      weeks: "21-26"
+      focus: "比赛配速训练，模拟比赛"
+      weekly_structure:
+        Mon: run.rest
+        Tue: run.tempo(30, 10, 10)
+        Wed: run.easy(30)
+        Thu: run.intervals(1000, 5, 3)
+        Fri: run.rest
+        Sat: run.easy(30)
+        Sun: run.long(18)
+      progression:
+        week_21: { volume: 36, long_run: 19, tempo: 35, race_pace: "5km" }
+        week_22: { volume: 32, long_run: 14 }  # 恢复周
+        week_23: { volume: 38, long_run: 20, tempo: 40, race_pace: "8km" }
+        week_24: { volume: 40, long_run: 21, tempo: 40, race_pace: "10km" }
+        week_25: { volume: 35, long_run: 16 }  # 恢复周
+        week_26: { volume: 38, long_run: 16, tempo: 30, race_pace: "半马模拟" }
+
+    - name: "减量期"
+      weeks: "27-30"
+      focus: "充分恢复，保持状态"
+      weekly_structure:
+        Mon: run.rest
+        Tue: run.tempo(20, 10, 10)
+        Wed: run.easy(25)
+        Thu: run.intervals(400, 4, 90)
+        Fri: run.rest
+        Sat: run.easy(20)
+        Sun: run.long(12)
+      progression:
+        week_27: { volume: 32, long_run: 14 }
+        week_28: { volume: 28, long_run: 12 }
+        week_29: { volume: 24, long_run: 8 }
+        week_30: { volume: 15, long_run: 5 }  # 比赛周
+
+workouts:
+  run.rest:
+    name: "休息日"
+    description: "完全休息或轻度活动（散步、拉伸）"
+    duration: 0
+    
+  run.easy:
+    name: "轻松跑"
+    description: "以可以轻松对话的配速跑步"
+    pace: "${paces.easy}"
+    zone: "Zone 2"
+    
+  run.tempo:
+    name: "节奏跑"
+    description: " comfortably hard 的强度，提升乳酸阈值"
+    structure:
+      warmup: "${param1}分钟轻松跑"
+      main: "${param2}分钟节奏跑 @ ${paces.threshold}"
+      cooldown: "${param3}分钟轻松跑"
+    zone: "Zone 3-4"
+    
+  run.intervals:
+    name: "间歇跑"
+    description: "高强度间歇，提升最大摄氧量"
+    structure:
+      warmup: "10分钟轻松跑 + 动态拉伸"
+      main: "${param2}组 ${param1}米 @ ${paces.interval}，组间休息${param3}秒"
+      cooldown: "10分钟轻松跑"
+    zone: "Zone 5"
+    
+  run.long:
+    name: "长距离慢跑"
+    description: "培养耐力，配速比马拉松配速慢30-60秒"
+    pace: "${paces.easy}"
+    zone: "Zone 2"
+    
+  run.race_pace:
+    name: "比赛配速跑"
+    description: "以目标比赛配速跑步，熟悉节奏"
+    pace: "${paces.marathon}"
+    zone: "Zone 3"
+
+race_day:
+  date: "2026-10-20"
+  target_time: "1:55:00"
+  target_pace: "5:27/km"
+  strategy:
+    - "前5公里：比目标配速慢5-10秒，热身适应"
+    - "5-15公里：保持目标配速5:27/km"
+    - "15-18公里：如感觉良好，可略快5秒/公里"
+    - "最后3公里：全力以赴，榨干剩余体力"
+  nutrition:
+    - "比赛前2-3小时：清淡碳水化合物早餐"
+    - "比赛中：每5公里补充水或运动饮料"
+    - "如需：携带1-2支能量胶，在10公里和16公里处补充"
+
+notes:
+  - "每周跑量增加不超过10%"
+  - "如感到疲劳或疼痛，立即休息"
+  - "保证充足睡眠（7-8小时）"
+  - "注意营养补充，特别是长距离跑后"
+  - "建议每周进行2-3次力量训练（深蹲、弓步、核心）"
+  - "购买合适的跑鞋，每500-800公里更换"
+  - "比赛前2周进行10公里测试赛，验证训练效果"

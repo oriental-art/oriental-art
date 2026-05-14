@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "skills": {
+    "notebooklm-skill": {
+      "name": "Notebooklm",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=notebooklm-skill",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "endurance-coach": {
+      "name": "Endurance Coach",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=endurance-coach",
+      "source": "skillhub",
+      "version": "1.4.0"
+    },
+    "python": {
+      "name": "Python Coding Guidelines",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=python",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "python-executor": {
+      "name": "Python Executor",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=python-executor",
+      "source": "skillhub",
+      "version": "0.1.5"
+    },
+    "py-env-setup": {
+      "name": "Python Env Setup",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=py-env-setup",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "python-dataviz": {
+      "name": "Python Dataviz",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=python-dataviz",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "python-script-generator": {
+      "name": "Python Script Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=python-script-generator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "stock": {
+      "name": "股票查询",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=stock",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "stock-analyst": {
+      "name": "股票分析",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=stock-analyst",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "finance-news-pro": {
+      "name": "财经新闻深度分析技能",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=finance-news-pro",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "tushare-finance": {
+      "name": "tushare-finance",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=tushare-finance",
+      "source": "skillhub",
+      "version": "2.0.6"
+    },
+    "mx-finance-search": {
+      "name": "Financial Search Engine",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=mx-finance-search",
+      "source": "skillhub",
+      "version": "1.0.6"
+    },
+    "stock-monitor-skill": {
+      "name": "Stock Monitor",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=stock-monitor-skill",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "mx-finance-data": {
+      "name": "All-Market Financial Data Hub",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=mx-finance-data",
+      "source": "skillhub",
+      "version": "1.0.8"
+    },
+    "morfeo-nano-banana-pro": {
+      "name": "Nano Banana Pro (Morfeo)",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=morfeo-nano-banana-pro",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "aliyun-image": {
+      "name": "aliyun-image",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aliyun-image",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "eachlabs-image-edit": {
+      "name": "Eachlabs Image Edit",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=eachlabs-image-edit",
+      "source": "skillhub",
+      "version": "0.1.1"
+    },
+    "astock-research": {
+      "name": "astock-research",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=astock-research",
+      "source": "skillhub",
+      "version": "1.2.0"
+    },
+    "tradingagents-analysis": {
+      "name": "Trading-Agents-Analysis-A股",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=tradingagents-analysis",
+      "source": "skillhub",
+      "version": "0.4.4"
+    },
+    "company-investment-research": {
+      "name": "Company Investment Research",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=company-investment-research",
+      "source": "skillhub",
+      "version": "0.3.0"
+    },
+    "investoday-finance-data": {
+      "name": "InvestToday Finance Data",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=investoday-finance-data",
+      "source": "skillhub",
+      "version": "1.0.5"
+    },
+    "ifind-repilot-finance-data-search": {
+      "name": "iFinD投研-自然语言查询金融数据",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ifind-repilot-finance-data-search",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "ifind-repilot-news-search": {
+      "name": "iFinD投研-金融资讯搜索",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ifind-repilot-news-search",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "ifind-repilot-announcement-search": {
+      "name": "iFinD投研-公司公告信息搜索",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ifind-repilot-announcement-search",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "lobster-quant-company": {
+      "name": "龙虾量化研究公司",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=lobster-quant-company",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "redquant-ashare-quant": {
+      "name": "中国A股股票智能分析大师",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=redquant-ashare-quant",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "ai-research-assistant": {
+      "name": "a-stock-ai-research",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-research-assistant",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "self-improving": {
+      "name": "Self-Improving + Proactive Agent",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=self-improving",
+      "source": "skillhub",
+      "version": "1.2.16"
+    },
+    "hk-ai-stock-expert": {
+      "name": "港股 AI 概念板块专属投研顾问。结合宏观流动性、南向资金博弈与 AI 产业基本面，提供深度的个股挖掘与风控策略。",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=hk-ai-stock-expert",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "frontend-slides": {
+      "name": "Frontend Slides",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=frontend-slides",
+      "source": "skillhub",
+      "version": "2.0.2"
+    }
+  }
+}

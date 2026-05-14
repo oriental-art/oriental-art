@@ -1,0 +1,50 @@
+# 可靠的占位图片URL列表
+# 使用 Lorem Picsum 和 Placehold.co 等可靠服务
+
+# 书法类 - 使用书法相关图片
+calligraphy/01_soul_of_brush.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/02_wang_xizhi.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/03_five_shades_ink.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/04_cursive_script.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/05_four_treasures.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/06_seal_script.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/07_tang_masters.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/08_meditative_art.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/09_women_calligraphy.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+calligraphy/10_digital_age.html|https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&q=80|书法兰亭序|https://images.unsplash.com/photo-1584448082978-4553a877b910?w=800&q=80|毛笔书写
+
+# 绘画类 - 使用山水画相关图片
+painting/01_essence_painting.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/02_shan_shui.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/03_bird_flower.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/04_song_masters.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/05_literati_painting.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/06_figure_painting.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/07_ink_wash.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/08_painting_theory.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/09_modern_painting.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+painting/10_collecting.html|https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800&q=80|中国传统绘画|https://images.unsplash.com/photo-1580136608260-4eb11f4b64fe?w=800&q=80|水墨画
+
+# 瓷器类 - 使用青花瓷相关图片
+ceramics/01_art_porcelain.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/02_blue_white.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/03_celadon.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/04_tang_sancai.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/05_song_dynasty.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/06_ming_porcelain.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/07_qing_porcelain.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/08_kilns.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/09_teapots.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+ceramics/10_collecting_ceramics.html|https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80|青花瓷|https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80|瓷器
+
+# 玉雕类 - 使用玉石相关图片
+jade/01_jade_carving.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/02_hetian_jade.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/03_jade_ritual.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/04_han_jade.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/05_jade_techniques.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/06_jadeite.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/07_master_carvers.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/08_symbolism.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/09_jade_jewelry.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器
+jade/10_future_jade.html|https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80|玉石雕刻|https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=800&q=80|玉器

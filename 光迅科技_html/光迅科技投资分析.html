@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光迅科技投资分析</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===========================================
+           VIEWPORT FITTING: MANDATORY BASE STYLES
+           =========================================== */
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* ===========================================
+           SWISS MODERN THEME VARIABLES
+           =========================================== */
+        :root {
+            /* Swiss Modern Color Palette */
+            --primary: #1a1a1a;
+            --secondary: #c41e3a;
+            --accent: #0066cc;
+            --background: #fafafa;
+            --surface: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --border: #e5e5e5;
+            
+            /* Typography Scale */
+            --title-size: clamp(2rem, 5vw, 4rem);
+            --h2-size: clamp(1.5rem, 3.5vw, 2.5rem);
+            --h3-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            --body-size: clamp(0.875rem, 1.5vw, 1.125rem);
+            --small-size: clamp(0.75rem, 1vw, 0.875rem);
+            
+            /* Spacing */
+            --slide-padding: clamp(2rem, 5vw, 5rem);
+            --content-gap: clamp(1rem, 2vw, 2rem);
+            --element-gap: clamp(0.5rem, 1vw, 1rem);
+            
+            /* Grid */
+            --grid-unit: 8px;
+        }
+
+        /* ===========================================
+           SLIDE STRUCTURE
+           =========================================== */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: var(--background);
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+            padding: var(--slide-padding);
+            max-width: min(1200px, 90vw);
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* ===========================================
+           TYPOGRAPHY - Swiss Modern Style
+           =========================================== */
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--title-size);
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0 0 var(--content-gap) 0;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .slide-subtitle {
+            font-size: var(--h3-size);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin: 0 0 var(--element-gap) 0;
+        }
+
+        .section-label {
+            font-size: var(--small-size);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--secondary);
+            margin-bottom: var(--element-gap);
+        }
+
+        /* ===========================================
+           CONTENT ELEMENTS
+           =========================================== */
+        .content-block {
+            font-size: var(--body-size);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: calc(var(--grid-unit) * 3);
+            margin-bottom: calc(var(--grid-unit) * 2);
+            font-size: var(--body-size);
+            line-height: 1.6;
+        }
+
+        .bullet-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 6px;
+            height: 6px;
+            background: var(--secondary);
+            border-radius: 50%;
+        }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--secondary);
+            padding: calc(var(--grid-unit) * 3);
+            margin: var(--content-gap) 0;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: calc(var(--grid-unit) * 3);
+            margin: var(--content-gap) 0;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: calc(var(--grid-unit) * 3);
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .metric-value {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 600;
+            color: var(--secondary);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            margin-top: calc(var(--grid-unit));
+        }
+
+        /* ===========================================
+           SPECIAL SLIDE LAYOUTS
+           =========================================== */
+        
+        /* Title Slide */
+        .title-slide {
+            background: var(--primary);
+            color: white;
+        }
+
+        .title-slide .slide-content {
+            align-items: center;
+            text-align: center;
+        }
+
+        .title-slide .slide-title {
+            color: white;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: calc(var(--grid-unit) * 3);
+        }
+
+        .title-slide .slide-subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: var(--h2-size);
+        }
+
+        .title-slide .meta-info {
+            font-size: var(--small-size);
+            color: rgba(255,255,255,0.6);
+            margin-top: calc(var(--grid-unit) * 6);
+            letter-spacing: 0.1em;
+        }
+
+        .title-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            margin: calc(var(--grid-unit) * 3) auto;
+        }
+
+        /* TOC Slide */
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: calc(var(--grid-unit) * 2);
+            margin-top: var(--content-gap);
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: baseline;
+            gap: calc(var(--grid-unit) * 2);
+            padding: calc(var(--grid-unit) * 2);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .toc-number {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--h2-size);
+            font-weight: 600;
+            color: var(--secondary);
+            min-width: 50px;
+        }
+
+        .toc-text {
+            font-size: var(--body-size);
+            color: var(--text-primary);
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: calc(var(--grid-unit) * 4);
+            align-items: start;
+        }
+
+        /* Risk/Highlight Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: calc(var(--grid-unit) * 2);
+        }
+
+        .info-card {
+            background: var(--surface);
+            padding: calc(var(--grid-unit) * 3);
+            border: 1px solid var(--border);
+        }
+
+        .info-card h3 {
+            font-size: var(--h3-size);
+            margin: 0 0 var(--element-gap) 0;
+            color: var(--primary);
+        }
+
+        /* Conclusion Slide */
+        .conclusion-slide {
+            background: var(--surface);
+        }
+
+        .conclusion-box {
+            background: var(--primary);
+            color: white;
+            padding: calc(var(--grid-unit) * 4);
+            margin-top: var(--content-gap);
+        }
+
+        .conclusion-box .bullet-list li::before {
+            background: var(--secondary);
+        }
+
+        /* ===========================================
+           ANIMATIONS
+           =========================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ===========================================
+           NAVIGATION
+           =========================================== */
+        .nav-dots {
+            position: fixed;
+            right: calc(var(--grid-unit) * 3);
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--grid-unit));
+            z-index: 100;
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .nav-dot.active {
+            background: var(--secondary);
+            transform: scale(1.3);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--secondary);
+            z-index: 100;
+            transition: width 0.3s ease;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: calc(var(--grid-unit) * 3);
+            right: calc(var(--grid-unit) * 3);
+            font-size: var(--small-size);
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* ===========================================
+           RESPONSIVE
+           =========================================== */
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .metric-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-height: 700px) {
+            :root {
+                --slide-padding: clamp(1rem, 3vw, 2rem);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="nav-dots" id="navDots"></div>
+
+    <!-- Slide 1: Title -->
+    <section class="slide title-slide">
+        <div class="slide-content">
+            <div class="reveal">
+                <h1 class="slide-title">光迅科技投资分析</h1>
+                <div class="title-accent"></div>
+            </div>
+            <p class="slide-subtitle reveal reveal-delay-1">002281.SZ | AI时代的光模块龙头</p>
+            <p class="meta-info reveal reveal-delay-2">2026年4月 | 机构投资研究</p>
+        </div>
+        <div class="slide-number">01 / 11</div>
+    </section>
+
+    <!-- Slide 2: Table of Contents -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Contents</div>
+            <h2 class="slide-title reveal reveal-delay-1">目录</h2>
+            <div class="toc-grid reveal reveal-delay-2">
+                <div class="toc-item">
+                    <span class="toc-number">01</span>
+                    <span class="toc-text">执行摘要与投资结论</span>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">02</span>
+                    <span class="toc-text">行业趋势与竞争格局</span>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">03</span>
+                    <span class="toc-text">公司财务表现分析</span>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">04</span>
+                    <span class="toc-text">估值分析与投资建议</span>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">05</span>
+                    <span class="toc-text">风险因素与情景分析</span>
+                </div>
+                <div class="toc-item">
+                    <span class="toc-number">06</span>
+                    <span class="toc-text">总结与行动建议</span>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">02 / 11</div>
+    </section>
+
+    <!-- Slide 3: Executive Summary -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Executive Summary</div>
+            <h2 class="slide-title reveal reveal-delay-1">执行摘要</h2>
+            <div class="highlight-box reveal reveal-delay-2">
+                <ul class="bullet-list">
+                    <li>光迅科技是中国光通信器件龙头，央企背景（中国信科集团）</li>
+                    <li>2025年前三季度营收85.32亿元，同比+58.65%，净利润7.19亿元，同比+54.95%</li>
+                    <li>AI算力需求驱动800G/1.6T光模块高速增长，公司技术储备充足</li>
+                    <li>当前PE 76倍，估值偏高，建议等待65-75元区间建仓</li>
+                </ul>
+            </div>
+            <div class="metric-grid reveal reveal-delay-3">
+                <div class="metric-item">
+                    <span class="metric-value">85.32亿</span>
+                    <span class="metric-label">2025前三季度营收</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">+58.65%</span>
+                    <span class="metric-label">营收同比增长</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">7.19亿</span>
+                    <span class="metric-label">前三季度净利润</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">76倍</span>
+                    <span class="metric-label">当前市盈率</span>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">03 / 11</div>
+    </section>
+
+    <!-- Slide 4: Industry Trends -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Industry Trends</div>
+            <h2 class="slide-title reveal reveal-delay-1">行业趋势</h2>
+            <div class="two-column">
+                <div class="reveal reveal-delay-2">
+                    <ul class="bullet-list">
+                        <li><strong>AI算力需求爆发：</strong>800G/1.6T光模块CAGR预计&gt;60%</li>
+                        <li><strong>国产替代加速：</strong>"东数西算"国家战略推动，央企背景优势明显</li>
+                        <li><strong>技术路线迭代：</strong>CPO技术2026-2027年商用，硅光技术渗透率提升</li>
+                    </ul>
+                </div>
+                <div class="reveal reveal-delay-3">
+                    <div class="info-card">
+                        <h3>市场驱动因素</h3>
+                        <ul class="bullet-list">
+                            <li>北美四大云厂商capex超2000亿美元</li>
+                            <li>国内AI大模型训练需求激增</li>
+                            <li>5G基站建设持续投入</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">04 / 11</div>
+    </section>
+
+    <!-- Slide 5: Financial Performance -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Financial Performance</div>
+            <h2 class="slide-title reveal reveal-delay-1">财务表现</h2>
+            <div class="metric-grid reveal reveal-delay-2">
+                <div class="metric-item">
+                    <span class="metric-value">85.32亿</span>
+                    <span class="metric-label">2025Q1-Q3营收</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">+58.65%</span>
+                    <span class="metric-label">营收同比增速</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">7.19亿</span>
+                    <span class="metric-label">净利润</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">+54.95%</span>
+                    <span class="metric-label">净利润同比增速</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">8.4%</span>
+                    <span class="metric-label">净利率</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">23.5%</span>
+                    <span class="metric-label">毛利率</span>
+                </div>
+            </div>
+            <div class="highlight-box reveal reveal-delay-3">
+                <p class="content-block">财务表现亮眼，营收和利润均实现高速增长，受益于AI算力需求爆发和光模块价格回升。毛利率和净利率处于行业健康水平。</p>
+            </div>
+        </div>
+        <div class="slide-number">05 / 11</div>
+    </section>
+
+    <!-- Slide 6: Valuation Comparison -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Valuation Comparison</div>
+            <h2 class="slide-title reveal reveal-delay-1">估值对比</h2>
+            <div class="card-grid reveal reveal-delay-2">
+                <div class="info-card">
+                    <h3>光迅科技</h3>
+                    <div class="metric-value">76倍</div>
+                    <p class="content-block" style="margin-top: 1rem;">当前PE估值，处于历史高位</p>
+                </div>
+                <div class="info-card">
+                    <h3>中际旭创</h3>
+                    <div class="metric-value">68倍</div>
+                    <p class="content-block" style="margin-top: 1rem;">行业龙头，估值相对合理</p>
+                </div>
+                <div class="info-card">
+                    <h3>新易盛</h3>
+                    <div class="metric-value">72倍</div>
+                    <p class="content-block" style="margin-top: 1rem;">细分领域龙头，成长性较好</p>
+                </div>
+            </div>
+            <div class="highlight-box reveal reveal-delay-3">
+                <p class="content-block">光迅科技估值高于行业平均水平，已透支未来2年增长预期。建议等待估值回调至65倍PE以下再考虑建仓。</p>
+            </div>
+        </div>
+        <div class="slide-number">06 / 11</div>
+    </section>
+
+    <!-- Slide 7: Investment Highlights -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Investment Highlights</div>
+            <h2 class="slide-title reveal reveal-delay-1">投资亮点</h2>
+            <div class="card-grid reveal reveal-delay-2">
+                <div class="info-card">
+                    <h3>AI算力需求爆发</h3>
+                    <p class="content-block">800G/1.6T光模块处于渗透率快速提升期，北美四大云厂商capex超2000亿美元</p>
+                </div>
+                <div class="info-card">
+                    <h3>国产替代红利</h3>
+                    <p class="content-block">央企背景，在政府和运营商采购中具有天然优势，"东数西算"战略直接受益</p>
+                </div>
+                <div class="info-card">
+                    <h3>技术储备充足</h3>
+                    <p class="content-block">CPO、硅光等前沿技术布局领先，研发实力雄厚，专利储备丰富</p>
+                </div>
+                <div class="info-card">
+                    <h3>产业链一体化</h3>
+                    <p class="content-block">从芯片到模块的垂直整合能力，成本控制和交付能力优于竞争对手</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">07 / 11</div>
+    </section>
+
+    <!-- Slide 8: Risk Factors -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Risk Factors</div>
+            <h2 class="slide-title reveal reveal-delay-1">风险因素</h2>
+            <div class="two-column">
+                <div class="reveal reveal-delay-2">
+                    <div class="info-card">
+                        <h3>估值风险</h3>
+                        <p class="content-block">PE 76倍已透支未来2年增长预期，存在估值回调压力</p>
+                    </div>
+                    <div class="info-card" style="margin-top: 1rem;">
+                        <h3>竞争风险</h3>
+                        <p class="content-block">行业产能扩张加速，中际旭创、新易盛等头部企业竞争激烈</p>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-3">
+                    <div class="info-card">
+                        <h3>技术风险</h3>
+                        <p class="content-block">CPO、硅光等新技术路线存在不确定性，技术迭代可能颠覆现有格局</p>
+                    </div>
+                    <div class="info-card" style="margin-top: 1rem;">
+                        <h3>客户集中风险</h3>
+                        <p class="content-block">前五大客户收入占比高，客户议价能力强，毛利率承压</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">08 / 11</div>
+    </section>
+
+    <!-- Slide 9: Investment Recommendation -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Investment Recommendation</div>
+            <h2 class="slide-title reveal reveal-delay-1">投资建议</h2>
+            <div class="highlight-box reveal reveal-delay-2">
+                <h3 style="margin-top: 0; color: var(--secondary);">评级：观望 | 目标价区间：65-75元</h3>
+                <ul class="bullet-list">
+                    <li><strong>当前建议：</strong>观望，等待估值回调</li>
+                    <li><strong>建仓区间：</strong>65-75元（对应PE 55-65倍）</li>
+                    <li><strong>止损位：</strong>55元（对应PE 45倍）</li>
+                    <li><strong>目标位：</strong>90-100元（对应PE 80-90倍）</li>
+                </ul>
+            </div>
+            <div class="metric-grid reveal reveal-delay-3">
+                <div class="metric-item">
+                    <span class="metric-value">观望</span>
+                    <span class="metric-label">当前评级</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">65-75元</span>
+                    <span class="metric-label">建议建仓区间</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">90-100元</span>
+                    <span class="metric-label">目标价位</span>
+                </div>
+            </div>
+        </div>
+        <div class="slide-number">09 / 11</div>
+    </section>
+
+    <!-- Slide 10: Scenario Analysis -->
+    <section class="slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Scenario Analysis</div>
+            <h2 class="slide-title reveal reveal-delay-1">情景分析</h2>
+            <div class="card-grid reveal reveal-delay-2">
+                <div class="info-card">
+                    <h3>乐观情景 (30%)</h3>
+                    <p class="content-block">AI需求超预期，800G/1.6T模块放量，目标价110-120元</p>
+                </div>
+                <div class="info-card">
+                    <h3>基准情景 (50%)</h3>
+                    <p class="content-block">行业平稳增长，估值回归合理区间，目标价90-100元</p>
+                </div>
+                <div class="info-card">
+                    <h3>悲观情景 (20%)</h3>
+                    <p class="content-block">需求不及预期，竞争加剧，估值下杀至50-60元</p>
+                </div>
+            </div>
+            <div class="highlight-box reveal reveal-delay-3">
+                <p class="content-block"><strong>概率加权目标价：85-95元</strong> | 当前股价已接近基准情景目标价，向上空间有限，向下风险较大。</p>
+            </div>
+        </div>
+        <div class="slide-number">10 / 11</div>
+    </section>
+
+    <!-- Slide 11: Conclusion -->
+    <section class="slide conclusion-slide">
+        <div class="slide-content">
+            <div class="section-label reveal">Conclusion</div>
+            <h2 class="slide-title reveal reveal-delay-1">总结</h2>
+            <div class="conclusion-box reveal reveal-delay-2">
+                <ul class="bullet-list">
+                    <li>光迅科技是AI时代的"卖铲人"，长期价值明确</li>
+                    <li>当前76倍PE估值需要业绩消化或股价回调来修复</li>
+                    <li>建议耐心等待65-75元的建仓机会</li>
+                    <li>核心风险：估值回调、竞争加剧、技术路线不确定性</li>
+                </ul>
+            </div>
+            <div class="highlight-box reveal reveal-delay-3" style="margin-top: 2rem; border-left-color: var(--accent);">
+                <p class="content-block" style="margin: 0; font-size: 1.2rem; font-weight: 500;">💡 好公司，需要好价格。当前观望，等待回调至65-75元区间建仓。</p>
+            </div>
+        </div>
+        <div class="slide-number">11 / 11</div>
+    </section>
+
+    <script>
+        // Slide Navigation
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+
+        // Create nav dots
+        const navDotsContainer = document.getElementById('navDots');
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'nav-dot' + (index === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goToSlide(index));
+            navDotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.nav-dot');
+        const progressBar = document.getElementById('progressBar');
+
+        function updateProgress() {
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            progressBar.style.width = progress + '%';
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                slides[index].scrollIntoView({ behavior: 'smooth' });
+                currentSlide = index;
+                updateProgress();
+            }
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                goToSlide(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                goToSlide(totalSlides - 1);
+            }
+        });
+
+        // Touch/Swipe navigation
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndY = e.changedTouches[0].screenY;
+            const diff = touchStartY - touchEndY;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }, { passive: true });
+
+        // Mouse wheel navigation
+        let wheelTimeout;
+        document.addEventListener('wheel', (e) => {
+            if (wheelTimeout) return;
+            wheelTimeout = setTimeout(() => {
+                wheelTimeout = null;
+            }, 500);
+            
+            if (e.deltaY > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }, { passive: true });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const reveals = entry.target.querySelectorAll('.reveal');
+                    reveals.forEach(el => el.classList.add('visible'));
+                    
+                    // Update current slide
+                    const slideIndex = Array.from(slides).indexOf(entry.target);
+                    if (slideIndex !== -1) {
+                        currentSlide = slideIndex;
+                        updateProgress();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        slides.forEach(slide => observer.observe(slide));
+
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>
