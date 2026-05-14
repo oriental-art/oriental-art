@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#f5f2ed"/>
+  <path d="M0 600 Q320 400 640 500 T1280 450 L1280 800 L0 800 Z" fill="#d4c4b0" opacity="0.5"/>
+  <path d="M0 500 Q400 300 800 400 T1280 350 L1280 800 L0 800 Z" fill="#c4b4a0" opacity="0.4"/>
+  <text x="640" y="380" font-family="serif" font-size="32" fill="#5a4a3a" text-anchor="middle" font-style="italic">Guo Xi</text>
+  <text x="640" y="420" font-family="sans-serif" font-size="16" fill="#8a7a6a" text-anchor="middle">Early Spring, Northern Song</text>
+</svg>
